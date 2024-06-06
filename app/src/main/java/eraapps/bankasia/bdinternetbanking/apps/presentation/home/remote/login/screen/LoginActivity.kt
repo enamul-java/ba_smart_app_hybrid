@@ -147,77 +147,11 @@ class LoginActivity : CustomAppCompatActivity(),
         tv_remember_id = findViewById(R.id.tv_remember_id)
 
         if(BuildConfig.FLAVOR.equals("dev")) {
-            //Nano loan test
-            //et_user_id_value.setText("00774289@bankasia.net") //CBS UAT Ashraf
-            //et_password_value.setText("Test@12345")
-
-            //et_user_id_value.setText("01300270@bankasia.net") //CBS UAT Nashedvai
-            //et_password_value.setText("Test#321") //CBS UAT Nashedvai
-
-            //et_user_id_value.setText("00742877@bankasia.net") //CBS UAT Ashraf
-            //et_password_value.setText("Test#12345")
-
-            //et_user_id_value.setText("rabbel") //ABS UAT
-            //et_password_value.setText("Test#123")
-
-            //et_user_id_value.setText("era@mybank.com") //ERA CBS
-            //et_password_value.setText("A1@a")
-
-            et_user_id_value.setText("00774289@bankasia.net") //Enamul CBS
+            et_user_id_value.setText("00774289@bankasia.net")
             et_password_value.setText("Test@123456")
-
-            //et_user_id_value.setText("aniken_2004@hotmail.com") // Samiul vai
-            //et_password_value.setText("Test@1234")
-
-
-            //et_user_id_value.setText("aniken_2004@hotmail.com") // Samiul vai
-            //et_password_value.setText("Test@12345")
-
-
-            //et_user_id_value.setText("sahinur.rahman@bankasia-bd.com") //Shahinur CBS
-            //et_password_value.setText("Test@1234")
-
-            //et_user_id_value.setText("nashid.qurishy@gmail.com") //Shahinur CBS
-            //et_password_value.setText("Test@1234")
-
-
-            //et_user_id_value.setText("i0042077@bankasia.net") //Islamic Coven
-            //et_password_value.setText("Test@12345")
-
-
-            //et_user_id_value.setText("33307904291") //Rabbel ABS
-            //et_password_value.setText("Test@123")
-
-            //et_password_value.setText("Rabbel@2005")//Live
-        }else if((BuildConfig.FLAVOR.equals("luat") || BuildConfig.FLAVOR.equals("uat"))
-            && BuildConfig.BUILD_TYPE.equals("debug")) {
-
-            et_user_id_value.setText("00774289@bankasia.net") //Enamul CBS
-            et_password_value.setText("Test@123456")
-
-            //et_user_id_value.setText("00774289@bankasia.net") //CBS UAT Ashraf
-            //et_password_value.setText("Test@12345")
-
-            //et_user_id_value.setText("33321900051") //Abs
-            //et_password_value.setText("Test@123")
-
-            //et_user_id_value.setText("i0039029@bankasia.net") //Hikmah
-            //et_password_value.setText("Test@1234")
-
-            //et_user_id_value.setText("aniken_2004@hotmail.com") // Samiul vai
-            //et_password_value.setText("Test@1234")
-        }else if(BuildConfig.FLAVOR.equals("nanouat")) {
-            //et_user_id_value.setText("00774289@bankasia.net") //Enamul CBS
-            //et_password_value.setText("Test@12345")
-            //et_user_id_value.setText("aniken_2004@hotmail.com") // Samiul vai
-            //et_password_value.setText("Test@1234")
-            //et_user_id_value.setText("00774289@bankasia.net") //Enamul CBS
-            //et_password_value.setText("Test@12345")
-            //et_user_id_value.setText("00774289@bankasia.net") //CBS UAT Ashraf
-            //et_password_value.setText("Test@12345")
-            et_user_id_value.setText("33321900051") //Abs
-            et_password_value.setText("Test@123")
         }
+
+
 
 
         val intent = intent

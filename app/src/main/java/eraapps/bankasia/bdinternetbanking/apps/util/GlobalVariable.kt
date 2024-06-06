@@ -9,11 +9,14 @@ import com.google.android.gms.maps.OnMapsSdkInitializedCallback
 import dagger.hilt.android.HiltAndroidApp
 import eraapps.bankasia.bdinternetbanking.apps.data.remote.dto.SourceAccountListDto
 import eraapps.bankasia.bdinternetbanking.apps.domain.remote.model.MenuModel
+import eraapps.bankasia.bdinternetbanking.apps.presentation.welcome.loan.model.LoanResultDataModel
 import okhttp3.MultipartBody
 
 
 @HiltAndroidApp
 class GlobalVariable : Application(),OnMapsSdkInitializedCallback{
+
+
 
     var vCardOperationMood: String? = ""
     var vCardActivityTitle: String? = ""
@@ -87,7 +90,9 @@ class GlobalVariable : Application(),OnMapsSdkInitializedCallback{
     var sourceAcStatementList: ArrayList<SourceAccountListDto> = ArrayList()
     var dashboardMenuList: ArrayList<MenuModel> = ArrayList()
  //Nano laon
+    var loanList: ArrayList<LoanResultDataModel> = ArrayList<LoanResultDataModel>()
     var nanoLoanSourceAccountList: ArrayList<SourceAccountListDto> = ArrayList()
+    var loanItemSelected: LoanResultDataModel? = null;
 
     var userImage_part: MultipartBody.Part? = null
     var userImageBitmapValue: Bitmap? = null

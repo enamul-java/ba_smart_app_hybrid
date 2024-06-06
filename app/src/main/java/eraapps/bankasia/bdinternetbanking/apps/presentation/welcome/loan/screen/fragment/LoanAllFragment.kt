@@ -15,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView
 import eraapps.bankasia.bdinternetbanking.apps.R
 import eraapps.bankasia.bdinternetbanking.apps.alert.SweetAlertDialog
 import eraapps.bankasia.bdinternetbanking.apps.common.data.HeaderData
-import eraapps.bankasia.bdinternetbanking.apps.presentation.home.remote.notification.screen.NotificationActivity
 import eraapps.bankasia.bdinternetbanking.apps.presentation.welcome.loan.adapter.LoanListAdaptar
 import eraapps.bankasia.bdinternetbanking.apps.presentation.welcome.loan.model.LoanModel
 import eraapps.bankasia.bdinternetbanking.apps.presentation.welcome.loan.model.LoanResultDataModel
