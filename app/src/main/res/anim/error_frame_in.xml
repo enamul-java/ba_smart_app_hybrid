@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:interpolator="@android:anim/linear_interpolator"
+    android:shareInterpolator="true">
+
+    <alpha
+        android:duration="400"
+        android:fromAlpha="0"
+        android:toAlpha="1" />
+
+
+    <app:eraapps.bankasia.bdinternetbanking.apps.alert.Rotate3dAnimation
+        android:duration="400"
+        app:fromDeg="100"
+        app:pivotX="50%"
+        app:pivotY="50%"
+        app:rollType="x"
+        app:toDeg="0" />
+</set>

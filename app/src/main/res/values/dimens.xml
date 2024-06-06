@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="welcome_gridview_hs_base">2dp</dimen>
+    <dimen name="welcome_gridview_padding_base">10dp</dimen>
+    <dimen name="welcome_gridview_vs_base">2dp</dimen>
+    <dimen name="header_height_base">130dp</dimen>
+    <dimen name="header_image_height_base">90dp</dimen>
+    <dimen name="row_welcome_menu_ll_margin_top_base">10dp</dimen>
+    <dimen name="menu_size">60dp</dimen>
+    <dimen name="sub_menu_size">85dp</dimen>
+    <dimen name="sub_menu_size_new">100dp</dimen>
+    <dimen name="sub_3menu_size">60dp</dimen>
+    <dimen name="padding_5">5dp</dimen>
+    <dimen name="row_welcome_menu_tv2_size_base">12dp</dimen>
+    <dimen name="row_welcome_menu_tv2_margin_top_base">10dp</dimen>
+    <dimen name="textsize_base">14dp</dimen>
+    <dimen name="textsize_label">11dp</dimen>
+    <dimen name="textsize_13">13dp</dimen>
+    <dimen name="statement_textsize_base_cedit_card">11sp</dimen>
+    <dimen name="statement_textsize_base">11dp</dimen>
+    <dimen name="success_textsize_base">16dp</dimen>
+    <dimen name="button_textsize_base">18dp</dimen>
+    <dimen name="login_appname_textsize_base">18dp</dimen>
+    <dimen name="loan_amount_textsize_base">18dp</dimen>
+    <dimen name="toolbar_textsize_base">16dp</dimen>
+    <dimen name="toolbar_quick_reach_textsize_base">20dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="login_button_height_base">60dp</dimen>
+    <dimen name="prepost_paid_height_base">40dp</dimen>
+    <dimen name="row_width_60">60dp</dimen>
+    <dimen name="margin_1">1dp</dimen>
+    <dimen name="margin_half">.2dp</dimen>
+    <dimen name="main_layout_maring_top_base">20dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="margin_100">100dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="button_margin_left">40dp</dimen>
+    <dimen name="sub_button_margin_left">60dp</dimen>
+    <dimen name="call_button_margin_left">80dp</dimen>
+    <dimen name="button_margin_right">40dp</dimen>
+    <dimen name="sub_button_margin_right">60dp</dimen>
+    <dimen name="call_button_margin_right">80dp</dimen>
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="toolbar_title_size">14dp</dimen>
+    <dimen name="text_input_layout_left_size">5dp</dimen>
+    <dimen name="text_input_layout_right_size">5dp</dimen>
+    <dimen name="text_input_layout_top_size">1dp</dimen>
+    <dimen name="text_input_layout_bottom_size">1dp</dimen>
+    <dimen name="btn_utility_validate_top_size">30dp</dimen>
+    <dimen name="input_field_height_size">60dp</dimen>
+    <dimen name="input_field_multi_height_size">120dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_15">15dp</dimen>
+    <dimen name="padding_20">20dp</dimen>
+    <dimen name="padding_50">50dp</dimen>
+    <dimen name="binimoy_id_padding_right">50dp</dimen>
+    <dimen name="padding_2">2dp</dimen>
+    <dimen name="welcome_menu_icon_height_base">30dp</dimen>
+    <dimen name="transaction_limit_tab_layout_height">50dp</dimen>
+    <dimen name="operator_icon_height_base">60dp</dimen>
+    <dimen name="row_width_30">30dp</dimen>
+    <dimen name="hide_layout_size_base">68dp</dimen>
+    <dimen name="input_padding_letf_base">15dp</dimen>
+    <dimen name="quick_reach_bottom_margin_bottom">45dp</dimen>
+    <dimen name="login_bottom_margin_bottom">20dp</dimen>
+    <dimen name="quick_reach_icon_height">50dp</dimen>
+    <dimen name="quick_reach_icon_margin_left">-25dp</dimen>
+    <dimen name="username_textsize_base">16dp</dimen>
+    <dimen name="dashboard_bottom_size_base">60dp</dimen>
+    <dimen name="signup_button_height">50dp</dimen>
+    <dimen name="login_button_height">60dp</dimen>
+    <dimen name="ac_open_button_height">60dp</dimen>
+    <dimen name="beneficiary_side_size">35dp</dimen>
+    <dimen name="login_card_corner_radius_base">5dp</dimen>
+    <dimen name="login_card_elevation_base">5dp</dimen>
+    <dimen name="actitle_own_size_base">-10dp</dimen>
+    <dimen name="dashboard_balance_layout_height_size_base">40dp</dimen>
+    <dimen name="dashboard_balance_image_size_base">35dp</dimen>
+    <dimen name="confirm_label_padding_base">0dp</dimen>
+    <dimen name="divider_height_base">1dp</dimen>
+    <dimen name="margin_top_otp_base">15dp</dimen>
+    <dimen name="margin_bottom_otp_base">15dp</dimen>
+    <dimen name="operator_padding_base">10dp</dimen>
+    <dimen name="beneficiary_icon_margin_right_base">65dp</dimen>
+    <dimen name="beneficiary_image_padding_base">20dp</dimen>
+    <dimen name="confirm_label_margin_base">10dp</dimen>
+    <dimen name="eft_npsb_rths_icon_size_base">35dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_dpacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="badge_text_size">16dp</dimen>
+
+    <dimen name="login_screen_hader_hight">0dp</dimen>
+    <dimen name="dialog_close_icon_size">30dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="tab_max_width">264dp</dimen>
+    <dimen name="tab_padding_bottom">16dp</dimen>
+    <dimen name="tab_label">14dp</dimen>
+    <dimen name="custom_tab_layout_height">72dp</dimen>
+
+
+    <dimen name="alert_width_base">290dp</dimen>
+    <dimen name="alert_width_360">290dp</dimen>
+    <dimen name="alert_width_7">350dp</dimen>
+    <dimen name="alert_width_10">450dp</dimen>
+    <dimen name="common_circle_width">3dp</dimen>
+    <dimen name="progress_circle_radius">34dp</dimen>
+
+
+    <dimen name="title_textsize_base">19dp</dimen>
+    <dimen name="title_textsize_360">19dp</dimen>
+    <dimen name="title_textsize_7">25dp</dimen>
+    <dimen name="title_textsize_10">35dp</dimen>
+
+    <dimen name="message_textsize_base">14dp</dimen>
+    <dimen name="message_textsize_360">14dp</dimen>
+    <dimen name="message_textsize_7">18dp</dimen>
+    <dimen name="message_textsize_10">25dp</dimen>
+
+
+    <dimen name="progress_wheel_size_base">80dp</dimen>
+    <dimen name="progress_wheel_size_360">80dp</dimen>
+    <dimen name="progress_wheel_size_7">100dp</dimen>
+    <dimen name="progress_wheel_size_10">130dp</dimen>
+
+
+    <dimen name="image_icon_size_base">53dp</dimen>
+    <dimen name="image_icon_size_360">53dp</dimen>
+    <dimen name="image_icon_size_7">62dp</dimen>
+    <dimen name="image_icon_size_10">75dp</dimen>
+
+
+    <dimen name="btn_download_height_base">40dp</dimen>
+    <dimen name="btn_margin_left_base">80dp</dimen>
+    <dimen name="btn_margin_right_base">80dp</dimen>
+
+    <dimen name="button_min_height_base">31dp</dimen>
+    <dimen name="button_min_height_360">31dp</dimen>
+    <dimen name="button_min_height_7">40dp</dimen>
+    <dimen name="button_min_height_10">50dp</dimen>
+    <dimen name="margin_25">25dp</dimen>
+    <dimen name="account_balance_label_textsize_base">14dp</dimen>
+    <dimen name="input_padding_top_base">10dp</dimen>
+    <dimen name="input_padding_right_base">10dp</dimen>
+    <dimen name="button_login_textsize_base">14dp</dimen>
+    <dimen name="sub_title_textsize_base">14dp</dimen>
+    <dimen name="success_message_margin_top_base">10dp</dimen>
+    <dimen name="success_dialog_maring_left_base">20dp</dimen>
+    <dimen name="success_dialog_maring_top_base">20dp</dimen>
+    <dimen name="success_dialog_maring_right_base">20dp</dimen>
+
+    <dimen name="icon_size_base">30dp</dimen>
+    <dimen name="home_icon_size_base">24dp</dimen>
+    <dimen name="sub_buton_round_size_base">40dp</dimen>
+    <dimen name="margin_40">40dp</dimen>
+    <dimen name="margin_50">50dp</dimen>
+    <dimen name="margin_60">60dp</dimen>
+    <dimen name="margin_80">80dp</dimen>
+
+    <dimen name="login_icon_size">100dp</dimen>
+
+    <dimen name="user_image_size">60dp</dimen>
+    <dimen name="otp_image_size">200dp</dimen>
+    <dimen name="input_padding_bottom_base">7dp</dimen>
+    <dimen name="header_content_minus_margin_top_base">-35dp</dimen>
+    <dimen name="login_edittext_left_base">-13dp</dimen>
+
+    <dimen name="scroll_view_layout_margin_base">5dp</dimen>
+    <dimen name="textsize_18">18dp</dimen>
+    <dimen name="branch_location_search_height">40dp</dimen>
+    <dimen name="padding_13">13dp</dimen>
+    <dimen name="textsize_15">15dp</dimen>
+    <dimen name="textsize_16">16dp</dimen>
+    <dimen name="textsize_12">12dp</dimen>
+    <dimen name="textsize_11">11dp</dimen>
+    <dimen name="padding_22">21dp</dimen>
+    <dimen name="row_height_60">60dp</dimen>
+    <dimen name="margin_7">7dp</dimen>
+
+    <dimen name="notification_tv_title_margin_base">5dp</dimen>
+    <dimen name="notification_tv_title_margin_360">5dp</dimen>
+    <dimen name="notification_tv_title_margin_7">10dp</dimen>
+    <dimen name="notification_tv_title_margin_10">15dp</dimen>
+
+
+    <dimen name="row_notification_icon_image_height_width_base">50dp</dimen>
+    <dimen name="row_notification_icon_image_height_width_360">50dp</dimen>
+    <dimen name="row_notification_icon_image_height_width_7">60dp</dimen>
+    <dimen name="row_notification_icon_image_height_width_10">60dp</dimen>
+
+    <dimen name="row_notifi_cardview_padding_base">5dp</dimen>
+    <dimen name="row_notifi_cardview_padding_360">5dp</dimen>
+    <dimen name="row_notifi_cardview_padding_7">10dp</dimen>
+    <dimen name="row_notifi_cardview_padding_10">15dp</dimen>
+    <dimen name="pallii_textsize">14dp</dimen>
+    <dimen name="dreg_payment_success_button_margin_top_base">10dp</dimen>
+    <dimen name="account_detail_padding_base">5dp</dimen>
+
+    <dimen name="edit_view_icon_width_base">60dp</dimen>
+    <dimen name="edit_view_icon_width_360">60dp</dimen>
+    <dimen name="edit_view_icon_width_7">70dp</dimen>
+    <dimen name="edit_view_icon_width_10">80dp</dimen>
+    <dimen name="qr_icon_size">40dp</dimen>
+    <dimen name="padding_1">1dp</dimen>
+    <dimen name="padding_3">3dp</dimen>
+    <dimen name="text_size_ac_welcome">25sp</dimen>
+
+
+    <dimen name="ac_open_header_wel_gen_logo_width_base">70dp</dimen>
+    <dimen name="ac_open_header_wel_gen_iv_width_360">60dp</dimen>
+    <dimen name="ac_open_header_acc_height_base">100dp</dimen>
+    <dimen name="ac_open_header_wel_gen_iv_height_360">50dp</dimen>
+    <dimen name="ac_open_header_wel_gen_iv_margin_top_360">10dp</dimen>
+    <dimen name="ac_open_header_wel_gen_iv_padding_left_360">5dp</dimen>
+    <dimen name="ac_open_btn_margin_base">18dp</dimen>
+    <dimen name="ac_open_btn_padding_base">18dp</dimen>
+    <dimen name="ac_open_btn_text_size_base">18sp</dimen>
+    <dimen name="ac_open_spacing_medium">5dp</dimen>
+    <dimen name="ac_open_r_title_margin_bottom_small">1dp</dimen>
+    <dimen name="ac_open_r_title_margin_left_small">5dp</dimen>
+    <dimen name="ac_open_s_main_title_margin_small">2dp</dimen>
+    <dimen name="ac_open_txt_title_size_small">18sp</dimen>
+    <dimen name="ac_open_lable_text_size_base">28sp</dimen>
+    <dimen name="ac_open_text_size_hint_base">18sp</dimen>
+    <dimen name="ac_open_r_margin_bottom_small">1dp</dimen>
+    <dimen name="ac_open_r_text_padding_small">5dp</dimen>
+    <dimen name="ac_open_text_size_value_small">14sp</dimen>
+    <dimen name="ac_open_r_margin_submit_buton_small">5dp</dimen>
+    <dimen name="ac_open_text_lable_size_base">18sp</dimen>
+    <dimen name="ac_open_card_view_general_height_base">90dp</dimen>
+    <dimen name="ac_open_card_view_edittext_general_height_base">53dp</dimen>
+
+</resources>

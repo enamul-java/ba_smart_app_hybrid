@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lo_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_5"
+            android:elevation="@dimen/margin_10"
+            app:cardElevation="@dimen/margin_10"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/tv_account_no_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="@string/account_no"
+                        android:textColor="@color/text_label_color"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="@string/colon"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <TextView
+                        android:id="@+id/tv_account_no_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".6"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal|center_vertical|left"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/tv_account_title_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text="@string/account_title"
+                        android:textColor="@color/text_label_color"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/colon"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <TextView
+                        android:id="@+id/tv_account_title_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".6"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal|center_vertical|left"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/tv_outstanding_amount_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text="@string/outstanding_amount"
+                        android:textColor="@color/text_label_color"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/colon"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <TextView
+                        android:id="@+id/tv_outstanding_amount_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".6"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal|center_vertical|left"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/tv_sanction_date_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text="@string/sanction_date"
+                        android:textColor="@color/text_label_color"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/colon"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <TextView
+                        android:id="@+id/tv_sanction_date_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".6"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical|left"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/tv_expiry_date_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text="@string/expire_date"
+                        android:textColor="@color/text_label_color"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/colon"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <TextView
+                        android:id="@+id/tv_expiry_date_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".6"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal|center_vertical|left"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/tv_link_ac_bal_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text="@string/link_ac_balance"
+                        android:textColor="@color/text_label_color"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/colon"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <TextView
+                        android:id="@+id/tv_link_ac_bal_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".6"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lo_partial_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:gravity="center_horizontal|center_vertical|left"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/tv_repay_amount_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text="@string/repay_amount"
+                        android:textColor="@color/text_label_color"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/colon"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <EditText
+                        android:id="@+id/edt_repay_amount_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".6"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/black"
+                        android:hint="Enter Partial Amount.."
+                        android:textSize="@dimen/textsize_base" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lo_full_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/tv_amount_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text="@string/settlement_amount"
+                        android:textColor="@color/text_label_color"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="@string/colon"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <TextView
+                        android:id="@+id/tv_amount_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".6"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="@string/zero"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/tv_status_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="@string/status"
+                        android:textColor="@color/text_label_color"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="@string/colon"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <TextView
+                        android:id="@+id/tv_status_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".6"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/success_text_color"
+                        android:textSize="@dimen/textsize_base" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+
+                    <TextView
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="@dimen/margin_5"
+                        android:background="@drawable/bt_background_rounded_green"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/prese_early_settlement"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_base" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</LinearLayout>

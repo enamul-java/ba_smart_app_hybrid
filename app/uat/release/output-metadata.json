@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "eraapps.bankasia.bdinternetbanking.apps",
+  "variantName": "uatRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 33,
+      "versionName": "2.0.4",
+      "outputFile": "app-uat-release.apk"
+    }
+  ],
+  "elementType": "File"
+}

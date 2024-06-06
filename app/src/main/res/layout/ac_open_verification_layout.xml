@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/input_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal|center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ac_open_mobile_verif" />
+
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:paddingBottom="5dp"
+           android:weightSum="2">
+
+           <TextView
+               android:id="@+id/textView"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Country Code"
+               android:textSize="@dimen/textsize_18"
+               android:layout_margin="10dp"/>
+
+           <LinearLayout
+               android:id="@+id/lo_country_code_layout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="5dp"
+               android:orientation="vertical">
+
+               <com.hbb20.CountryCodePicker
+                   android:id="@+id/country_code"
+                   android:layout_width="wrap_content"
+                   android:layout_height="@dimen/input_field_height_size"
+                   android:visibility="gone"
+                   app:ccp_defaultNameCode="US"
+                   app:ccp_showFlag="true"
+                   app:ccp_showFullName="true"
+                   app:ccp_showNameCode="true">
+
+               </com.hbb20.CountryCodePicker>
+
+               <LinearLayout
+                   android:id="@+id/lo_bangladesh_c_code"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:gravity="center_vertical|center_horizontal|left"
+                   android:padding="10dp"
+                   android:minHeight="50dp">
+
+                   <ImageView
+                       android:layout_width="40dp"
+                       android:layout_height="50dp"
+                       android:src="@drawable/bangladesh_flag"/>
+
+                   <TextView
+                       android:id="@+id/textView2"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:text=" Bangladesh +880 "
+                       android:textColor="@color/black"
+                       android:layout_marginLeft="5dp"
+                       android:textSize="18sp"/>
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="0dp">
+           <com.google.android.material.textfield.TextInputLayout
+               android:id="@+id/lyt_mobile_no"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginStart="@dimen/text_input_layout_left_size"
+               android:layout_marginTop="@dimen/text_input_layout_top_size"
+               android:layout_marginEnd="@dimen/text_input_layout_right_size"
+               android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+               android:hint="@string/mobile_number"
+               android:padding="@dimen/padding_5"
+               android:layout_weight="1.5"
+               app:boxStrokeColor="@color/app_color"
+               app:boxStrokeErrorColor="@color/app_color">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/edt_mobile_no"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/input_field_height_size"
+                   android:inputType="number"
+                   android:maxLength="19"
+                   android:padding="@dimen/padding_5"
+                   android:singleLine="true"
+                   android:textColor="@color/black"
+                   android:textSize="@dimen/textsize_18" />
+
+           </com.google.android.material.textfield.TextInputLayout>
+           </LinearLayout>
+
+       </LinearLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lyt_email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/text_input_layout_left_size"
+            android:layout_marginTop="@dimen/text_input_layout_top_size"
+            android:layout_marginEnd="@dimen/text_input_layout_right_size"
+            android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+            android:hint="@string/email"
+            android:padding="@dimen/padding_5"
+            android:visibility="gone"
+            app:boxStrokeColor="@color/app_color"
+            app:boxStrokeErrorColor="@color/app_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_field_height_size"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/padding_5"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_18" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_proceed_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_value">
+
+        <include layout="@layout/btn_proceed_layout" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

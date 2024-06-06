@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/success_voucher_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/cardview_background_shadow"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:cardCornerRadius="10dp"
+            app:cardElevation="@dimen/margin_5"
+            app:cardUseCompatPadding="true"
+            app:elevation="0dp"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:id="@+id/ac_no_balance_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/linear_layout_round_confirm"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <include layout="@layout/loan_header" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/confirm_label_margin_base"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_10">
+
+                        <TextView
+                            android:id="@+id/tv_success_message"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/success"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_base" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="@dimen/margin_5"
+            app:cardUseCompatPadding="true"
+            app:elevation="0dp"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:id="@+id/ac_nosuccess_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/linear_layout_round_confirm"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_5">
+
+                    <TextView
+                        android:id="@+id/tv_success_input_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:layout_marginRight="10dp"
+
+                        android:singleLine="true"
+                        android:text="@string/laon_approve_info"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/textsize_base"
+                        android:textStyle="bold"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/tv_loan_success_amount_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/approve_amount"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_loan_success_amount_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/tv_loan_success_month_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="@string/month"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_loan_success_month_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/tv_loan_success_receiver_account_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/receiving_ac"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_loan_success_receiver_account_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/tv_loan_success_interest_rate_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/interest_rate"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_loan_success_interest_rate_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/tv_loan_success_processing_fee_vat_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/process_fee_with_vate"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_loan_success_processing_fee_vat_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/tv_loan_success_usabale_amount_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/net_usable_amount"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_loan_success_usabale_amount_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/tv_loan_success_payment_date_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/disburse_date"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_loan_success_payment_date_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/tv_loan_success_first_installment_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/first_installment_date"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_loan_success_first_installment_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+                        <TextView
+                            android:id="@+id/tv_success_cal_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:text="Loan Calculation Information"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/textsize_base"
+                            android:textStyle="bold"/>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/tv_loan_success_loan_payable_permonth_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/loan_payable_per_month"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_loan_success_loan_payable_permonth_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:text="@string/zero"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/tv_loan_success_total_interest_payable_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/total_interest_payable"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_loan_success_total_interest_payable_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/tv_loan_success_total_payment_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/total_payment"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_loan_success_total_payment_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/layout_bottom_diburse_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_marginRight="@dimen/margin_5"
+
+            android:layout_alignParentBottom="true"
+            android:weightSum="3">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDisburse"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/prepost_paid_height_base"
+                android:layout_margin="@dimen/margin_5"
+                android:layout_weight="1"
+                android:background="@drawable/btn_round_border_statement_today"
+                android:text="@string/loan_disburse_now"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_base" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLater"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/prepost_paid_height_base"
+                android:layout_margin="@dimen/margin_5"
+                android:layout_weight="1"
+                android:background="@drawable/btn_round_border_statement_last_week"
+                android:text="@string/loan_disburse_later"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_base" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btbCancelLoan"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/prepost_paid_height_base"
+                android:layout_margin="@dimen/margin_5"
+                android:layout_weight="1"
+                android:background="@drawable/btn_round_border_transparent_unselect"
+                android:text="@string/loan_canel"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_base" />
+        </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="@dimen/margin_5"-->
+<!--            android:layout_marginTop="@dimen/margin_5"-->
+<!--            android:layout_marginRight="@dimen/margin_5"-->
+<!--            android:weightSum="3">-->
+
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:id="@+id/btnDisburse"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/prepost_paid_height_base"-->
+<!--                android:layout_margin="@dimen/margin_5"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/btn_round_border_statement_today"-->
+<!--                android:text="@string/loan_disburse_now"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="@dimen/textsize_base" />-->
+
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:id="@+id/btnLater"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/prepost_paid_height_base"-->
+<!--                android:layout_margin="@dimen/margin_5"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/btn_round_border_statement_last_week"-->
+<!--                android:text="@string/loan_disburse_later"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="@dimen/textsize_base" />-->
+
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:id="@+id/btbCancelLoan"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/prepost_paid_height_base"-->
+<!--                android:layout_margin="@dimen/margin_5"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/btn_round_border_transparent_unselect"-->
+<!--                android:text="@string/loan_canel"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="@dimen/textsize_base" />-->
+<!--        </LinearLayout>-->
+
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

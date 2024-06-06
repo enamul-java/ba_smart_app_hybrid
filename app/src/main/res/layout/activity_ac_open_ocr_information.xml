@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".presentation.home.remote.ac_open.view.AcOpenOcrInformationActivity">
+
+    <LinearLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <include layout="@layout/header_layout_toolbar" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_layout"
+
+        android:orientation="vertical">
+
+        <ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:fillViewport="true"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lyt_ocr_info_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/lyt_nid_no"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/text_input_layout_left_size"
+                        android:layout_marginTop="@dimen/text_input_layout_top_size"
+                        android:layout_marginEnd="@dimen/text_input_layout_right_size"
+                        android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+                        android:hint="@string/nid_no"
+                        android:padding="@dimen/padding_5"
+                        app:boxStrokeColor="@color/app_color"
+                        app:boxStrokeErrorColor="@color/app_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_nid_no"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/input_field_height_size"
+                            android:inputType="number"
+                            android:maxLength="19"
+                            android:padding="@dimen/padding_5"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_18" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/lyt_dob"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:layout_marginRight="@dimen/margin_5"
+                        android:layout_weight="1"
+                        android:hint="@string/date_of_birth"
+                        android:padding="@dimen/padding_5"
+                        app:boxStrokeColor="@color/app_color"
+                        app:boxStrokeErrorColor="@color/app_color"
+                        app:endIconDrawable="@drawable/ic_date"
+                        app:endIconMode="custom">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_dob"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/input_field_height_size"
+                            android:inputType="date"
+                            android:padding="@dimen/padding_5"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_18" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/lyt_fathers_name_bangla"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/text_input_layout_left_size"
+                        android:layout_marginTop="@dimen/text_input_layout_top_size"
+                        android:layout_marginEnd="@dimen/text_input_layout_right_size"
+                        android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+                        android:hint="@string/fathers_name_bangla"
+                        android:padding="@dimen/padding_5"
+                        app:boxStrokeColor="@color/app_color"
+                        app:boxStrokeErrorColor="@color/app_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_fathers_name_bangla"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/input_field_height_size"
+                            android:inputType="text"
+                            android:maxLength="19"
+                            android:padding="@dimen/padding_5"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_18" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/lyt_fathers_name_english"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/text_input_layout_left_size"
+                        android:layout_marginTop="@dimen/text_input_layout_top_size"
+                        android:layout_marginEnd="@dimen/text_input_layout_right_size"
+                        android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+                        android:hint="@string/fathers_name_english"
+                        android:padding="@dimen/padding_5"
+                        app:boxStrokeColor="@color/app_color"
+                        app:boxStrokeErrorColor="@color/app_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_fathers_name_english"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/input_field_height_size"
+                            android:inputType="text"
+                            android:maxLength="19"
+                            android:padding="@dimen/padding_5"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_18" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/lyt_mothers_name_bangla"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/text_input_layout_left_size"
+                        android:layout_marginTop="@dimen/text_input_layout_top_size"
+                        android:layout_marginEnd="@dimen/text_input_layout_right_size"
+                        android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+                        android:hint="@string/mothers_name_bangla"
+                        android:padding="@dimen/padding_5"
+                        app:boxStrokeColor="@color/app_color"
+                        app:boxStrokeErrorColor="@color/app_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_mothers_name_bangla"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/input_field_height_size"
+                            android:inputType="text"
+                            android:maxLength="19"
+                            android:padding="@dimen/padding_5"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_18" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/lyt_mothers_name_english"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/text_input_layout_left_size"
+                        android:layout_marginTop="@dimen/text_input_layout_top_size"
+                        android:layout_marginEnd="@dimen/text_input_layout_right_size"
+                        android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+                        android:hint="@string/mothers_name_english"
+                        android:padding="@dimen/padding_5"
+                        app:boxStrokeColor="@color/app_color"
+                        app:boxStrokeErrorColor="@color/app_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_mothers_name_english"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/input_field_height_size"
+                            android:inputType="text"
+                            android:maxLength="19"
+                            android:padding="@dimen/padding_5"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_18" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/btn_next_layout" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/lyt_ocr_info_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/ac_open_gender_dropdown_layout" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/ac_open_occupation_dropdown_layout" />
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/lyt_spouse_name"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/text_input_layout_left_size"
+                        android:layout_marginTop="@dimen/text_input_layout_top_size"
+                        android:layout_marginEnd="@dimen/text_input_layout_right_size"
+                        android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+                        android:hint="@string/spouse_name"
+                        android:padding="@dimen/padding_5"
+                        app:boxStrokeColor="@color/app_color"
+                        app:boxStrokeErrorColor="@color/app_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_spouse_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/input_field_height_size"
+                            android:inputType="text"
+                            android:maxLength="19"
+                            android:padding="@dimen/padding_5"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_18" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/lyt_present_address"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/text_input_layout_left_size"
+                        android:layout_marginTop="@dimen/text_input_layout_top_size"
+                        android:layout_marginEnd="@dimen/text_input_layout_right_size"
+                        android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+                        android:hint="@string/present_address"
+                        android:padding="@dimen/padding_5"
+                        app:boxStrokeColor="@color/app_color"
+                        app:boxStrokeErrorColor="@color/app_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_present_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/input_field_height_size"
+                            android:inputType="text"
+                            android:maxLength="19"
+                            android:padding="@dimen/padding_5"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_18" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/text_input_layout_left_size"
+                        android:layout_marginTop="@dimen/text_input_layout_top_size"
+                        android:layout_marginEnd="@dimen/text_input_layout_right_size"
+                        android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+                        android:layoutDirection="rtl"
+                        android:weightSum="2">
+
+                        <CheckBox
+                            android:id="@+id/checkbox_same_as_present"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_same_as_present"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/same_as_present"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_18" />
+
+
+                    </LinearLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/lyt_permanent_address"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/text_input_layout_left_size"
+                        android:layout_marginTop="@dimen/text_input_layout_top_size"
+                        android:layout_marginEnd="@dimen/text_input_layout_right_size"
+                        android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+                        android:hint="@string/permanent_address"
+                        android:padding="@dimen/padding_5"
+                        app:boxStrokeColor="@color/app_color"
+                        app:boxStrokeErrorColor="@color/app_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_permanent_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/input_field_height_size"
+                            android:inputType="text"
+                            android:maxLength="19"
+                            android:padding="@dimen/padding_5"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_18" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/tv_nominee_submit_note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_7"
+                        android:layout_marginTop="@dimen/text_input_layout_top_size"
+                        android:layout_marginEnd="@dimen/margin_7"
+                        android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+                        android:text="@string/ac_open_nominee_guideline"
+                        android:textSize="@dimen/textsize_18" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_add_nominee"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:layout_marginTop="@dimen/margin_20"
+                            android:layout_marginEnd="@dimen/margin_10"
+                            android:layout_marginBottom="@dimen/margin_10"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_round_border_transparent_grey"
+                            android:padding="@dimen/padding_5"
+                            android:text="@string/add_nominee"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_submit"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:layout_marginTop="@dimen/margin_20"
+                            android:layout_marginEnd="@dimen/margin_10"
+                            android:layout_marginBottom="@dimen/margin_10"
+                            android:layout_weight="1"
+                            android:background="@drawable/bt_background_rounded_app_color"
+                            android:padding="@dimen/padding_5"
+                            android:text="@string/submit"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

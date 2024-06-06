@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.home.remote.login.screen.LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_20"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/login_icon_size"
+                android:layout_height="@dimen/login_icon_size"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_login" />
+
+            <TextView
+                android:id="@+id/tv_bank_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_5"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/login_appname_textsize_base"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/login_bottom_margin_bottom"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/padding_5"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/tv_user_id_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/user_id"
+                            android:textColor="@color/text_label_color"
+                            android:textSize="@dimen/textsize_base" />
+
+                        <TextView
+                            android:id="@+id/tv_forgot_user_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="@string/forgot_user_id"
+                            android:textColor="@color/text_label_color"
+                            android:textSize="@dimen/textsize_base" />
+                    </LinearLayout>
+
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/et_user_id_value"
+                        style="@style/EditTextTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/input_field_height_size"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@._-"
+                        android:hint="@string/user_id"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/padding_5"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/tv_password_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/password"
+                            android:textColor="@color/text_label_color"
+                            android:textSize="@dimen/textsize_base" />
+
+                        <TextView
+                            android:id="@+id/tv_forgot_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="@string/forgot_password"
+                            android:textColor="@color/text_label_color"
+                            android:textSize="@dimen/textsize_base" />
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_password_value1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/input_field_height_size"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base"
+                        android:visibility="gone" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintEnabled="false"
+                        app:passwordToggleEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_password_value"
+                            style="@style/EditTextTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/input_field_height_size"
+                            android:layout_marginStart="@dimen/login_edittext_left_base"
+                            android:background="@color/white"
+                            android:gravity="center_vertical"
+                            android:hint="@string/password"
+                            android:inputType="textPassword"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_base" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/checkbox_lyt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/chk_sure_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center_vertical"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <TextView
+                        android:id="@+id/tv_remember_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="2dp"
+                        android:text="@string/remember_user_id"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base"
+                        android:visibility="visible" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_30"
+                        android:layout_marginRight="@dimen/margin_30"
+                        android:orientation="horizontal">
+
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_login"
+                            android:layout_width="60dp"
+                            android:layout_height="@dimen/login_button_height"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bt_background_rounded_ac_login2"
+                            android:text="@string/login"
+                            android:textColor="@color/button_text_color"
+                            android:textSize="@dimen/button_textsize_base" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_finger"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="60dp"
+                                android:layout_height="57dp"
+                                android:padding="10dp"
+                                app:strokeColor="@color/app_color"
+                                app:strokeWidth="1dp"
+                                card_view:cardCornerRadius="10dp">
+
+                                <ImageView
+                                    android:id="@+id/iv_finger_touch_id"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+
+                                    android:layout_gravity="center"
+                                    android:padding="@dimen/margin_10"
+                                    android:src="@drawable/icon_fingerprint" />
+                            </com.google.android.material.card.MaterialCardView>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/btn_login_touchid_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/sub_buton_round_size_base"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/sub_button_margin_left"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:layout_marginEnd="@dimen/sub_button_margin_right"
+                        android:layout_marginBottom="@dimen/margin_10"
+                        android:background="@drawable/btn_round_border_transparent_grey"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/padding_5">
+
+                        <ImageView
+                            android:id="@+id/iv_touchid"
+                            android:layout_width="@dimen/icon_size_base"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:padding="@dimen/padding_5"
+                            android:src="@drawable/icon_fingerprint" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_finger"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:padding="@dimen/padding_5"
+                            android:text="@string/login_with_touch_id"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_30"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_ac_opening"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/signup_button_height"
+                        android:layout_weight="1"
+                        android:background="@drawable/bt_background_rounded_ac_open"
+                        android:text="@string/a_c_opening"
+                        android:textColor="@color/button_text_color"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_signup"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/signup_button_height"
+                        android:layout_weight="1"
+                        android:background="@drawable/bt_background_rounded_ac_signup"
+                        android:text="@string/register"
+                        android:textColor="@color/button_text_color"
+                        android:textSize="@dimen/textsize_base" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:id="@+id/btn_call_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/sub_buton_round_size_base"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/call_button_margin_left"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:layout_marginEnd="@dimen/call_button_margin_right"
+                        android:layout_marginBottom="@dimen/margin_10"
+                        android:background="@drawable/btn_round_border_transparent_grey"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/padding_5">
+
+                        <ImageView
+                            android:id="@+id/iv_call"
+                            android:layout_width="@dimen/icon_size_base"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:paddingTop="@dimen/padding_5"
+                            android:paddingBottom="@dimen/padding_5"
+                            android:src="@drawable/icon_callcenter" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_call"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:text="@string/_16205"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_base" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_powered_by"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_10"
+            android:gravity="center"
+            android:text="@string/era_infotech_ltd"
+            android:textColor="@color/text_label_color"
+            android:textSize="@dimen/textsize_base" />
+    </LinearLayout>
+
+</RelativeLayout>

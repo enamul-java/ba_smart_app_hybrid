@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.welcome.binimoy.screen.BinimoyResistrationRequest">
+
+    <LinearLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include layout="@layout/header_layout_toolbar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lo_direct_pay_input"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <include layout="@layout/binimoy_direct_pay_input_layout" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lo_direct_pay_pin"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal|center_vertical|bottom"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:gravity="center_vertical|center_horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_binimoy_pin"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_5"
+                android:layout_marginVertical="@dimen/margin_1"
+                android:hint="Binimoy PIN"
+                android:padding="@dimen/padding_5">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_binimoy_pin"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_field_height_size"
+                    android:inputType="numberPassword"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_base" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/signup_button_height"
+                android:layout_marginHorizontal="@dimen/margin_30"
+                android:layout_marginTop="@dimen/margin_30"
+                android:background="@drawable/bt_background_rounded_ac_signup"
+                android:text="Confirm"
+                android:textColor="@color/button_text_color"
+                android:textSize="@dimen/textsize_base" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lo_direct_pay_success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical|bottom"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include layout="@layout/binimoy_direct_pay_success_layout" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

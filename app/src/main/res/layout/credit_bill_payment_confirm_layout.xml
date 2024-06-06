@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/input_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cardview_background_shadow"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:outlineAmbientShadowColor="@color/app_color"
+            android:outlineSpotShadowColor="@color/app_color"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="@dimen/margin_5"
+            app:cardUseCompatPadding="true"
+            app:elevation="0dp"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:id="@+id/ac_no_balance_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/linear_layout_round_confirm"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_10">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/confirm_label_margin_base"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/confirm_label_padding_base">
+
+                            <TextView
+                                android:id="@+id/tv_other_bank_confirm_source_account_no_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/source_account_no"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_other_bank_confirm_source_account_no"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/confirm_label_margin_base"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/confirm_label_padding_base"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/tv_other_bank_confirm_source_account_title_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/source_account_title"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_other_bank_confirm_source_account_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/confirm_label_margin_base"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/confirm_label_padding_base">
+
+                            <TextView
+                                android:id="@+id/tv_other_bank_confirm_destination_a_c_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/destination_card_no"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_other_bank_confirm_destination_a_c"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/confirm_label_margin_base"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/confirm_label_padding_base">
+
+                            <TextView
+                                android:id="@+id/tv_other_bank_confirm_destination_a_c_title_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/destination_card_title"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_other_bank_confirm_destination_a_c_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color"
+                            android:visibility="gone" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/confirm_label_margin_base"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/confirm_label_padding_base"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/tv_other_bank_confirm_destination_bank_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/destination_bank"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_other_bank_confirm_destination_bank"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color"
+                            android:visibility="gone" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/confirm_label_margin_base"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/confirm_label_padding_base"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/tv_other_bank_confirm_destination_branch_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/destination_branch"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_other_bank_confirm_destination_branch"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/confirm_label_margin_base"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/confirm_label_padding_base">
+
+                            <TextView
+                                android:id="@+id/tv_other_bank_confirm_dtransper_type_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/transper_type"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_other_bank_confirm_transper_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/confirm_label_margin_base"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/confirm_label_padding_base">
+
+                            <TextView
+                                android:id="@+id/tv_other_bank_confirm_currency_type_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/currency_type"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_other_bank_confirm_currency_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/confirm_label_margin_base"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/confirm_label_padding_base">
+
+                            <TextView
+                                android:id="@+id/tv_other_bank_confirm_transfer_amount_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/transfer_amount"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_other_bank_confirm_transfer_amount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:text="@string/zero"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/confirm_label_margin_base"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/confirm_label_padding_base">
+
+                            <TextView
+                                android:id="@+id/tv_other_bank_confirm_charge_amount_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/charge_amount"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_other_bank_confirm_charge_amount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:text="@string/zero"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/confirm_label_margin_base"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/confirm_label_padding_base">
+
+                            <TextView
+                                android:id="@+id/tv_other_bank_confirm_vat_amount_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/vat_amount"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_other_bank_confirm_vat_amount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:text="@string/zero"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/confirm_label_margin_base"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/confirm_label_padding_base">
+
+                            <TextView
+                                android:id="@+id/tv_other_bank_confirm_total_amount_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/total_amount"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_other_bank_confirm_total_amount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:text="@string/zero"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/password_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_top_otp_base"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_bottom_otp_base"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/otp_input"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/otp"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_otp_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_field_height_size"
+                    android:inputType="textPassword"
+                    android:padding="@dimen/padding_5"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_base" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_submit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_value"
+        android:orientation="vertical">
+
+        <include layout="@layout/btn_submit_layout" />
+    </LinearLayout>
+
+
+</RelativeLayout>

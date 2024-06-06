@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/input_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cardview_background_shadow"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:outlineAmbientShadowColor="@color/app_color"
+            android:outlineSpotShadowColor="@color/app_color"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="@dimen/margin_5"
+            app:cardUseCompatPadding="true"
+            app:elevation="0dp"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:id="@+id/ac_no_balance_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/linear_layout_round_confirm"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_10">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/confirm_label_margin_base"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/confirm_label_padding_base">
+
+                            <TextView
+                                android:id="@+id/tv_other_add_bene_account_no_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/account_no"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_other_add_bene_account_no"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/confirm_label_margin_base"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/confirm_label_padding_base">
+
+                            <TextView
+                                android:id="@+id/tv_other_add_bene_confirm_account_title_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/account_title"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_other_add_bene_confirm_account_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/confirm_label_margin_base"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/confirm_label_padding_base">
+
+                            <TextView
+                                android:id="@+id/tv_other_add_bene_confirm_bank_name_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/bank_name"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_other_add_bene_confirm_bank_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/confirm_label_margin_base"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/confirm_label_padding_base">
+
+                            <TextView
+                                android:id="@+id/tv_other_add_bene_confirm_branch_name_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/branch_name"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_other_add_bene_confirm_branch_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/confirm_label_margin_base"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/confirm_label_padding_base">
+
+                            <TextView
+                                android:id="@+id/tv_other_add_bene_confirm_nick_name_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/nick_name"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_other_add_bene_confirm_nick_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/confirm_label_margin_base"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/confirm_label_padding_base">
+
+                            <TextView
+                                android:id="@+id/tv_other_add_bene_confirm_mobile_no_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/mobile_no"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_other_add_bene_confirm_mobile_no"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/confirm_label_margin_base"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/confirm_label_padding_base">
+
+                            <TextView
+                                android:id="@+id/tv_other_add_bene_confirm_email_id_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/email_id"
+                                android:textColor="@color/confirm_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_other_add_bene_confirm_email_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/confirm_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/otp_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_top_otp_base"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_bottom_otp_base"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/otp_input"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/otp"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_otp_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_field_height_size"
+                    android:inputType="textPassword"
+                    android:padding="@dimen/padding_5"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_base" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_submit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_value"
+        android:orientation="vertical">
+
+        <include layout="@layout/btn_submit_layout" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ac_open_background_image"
+    android:orientation="vertical">
+
+    <include layout="@layout/ac_open_actionbar_header" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:visibility="gone"
+        app:elevation="0dp">
+
+        <include layout="@layout/ac_open_toolbar" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/ac_open_content_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fillViewport="true"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/red"
+                    app:cardBackgroundColor="@color/ac_open_blue_light"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/txtReqDoc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/ac_open_require_document"
+                            android:textColor="@color/ac_open_black_pure"
+                            android:textSize="@dimen/ac_open_text_lable_size_base"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtLable"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/ac_open_simplified"
+                            android:textSize="@dimen/ac_open_text_lable_size_base"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/txtlable2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/ac_open_nid_card_nominee_info"
+                            android:textSize="@dimen/ac_open_text_lable_size_base" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="3. Monthly Transaction Limit Less than 5 Lac BDT"
+                            android:textSize="@dimen/ac_open_text_lable_size_base"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/txtRegular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/ac_open_regular"
+                            android:textSize="@dimen/ac_open_text_lable_size_base"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/txtlable3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ac_open_nid_card_nominee_info_tax_info"
+                            android:textSize="@dimen/ac_open_text_lable_size_base"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="3. Monthly Transaction Limit More than 5 Lac BDT"
+                            android:textSize="@dimen/ac_open_text_lable_size_base"
+
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/txtTransaction"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/transaction_limit"
+                            android:textColor="@color/ac_open_black_pure"
+                            android:textSize="@dimen/ac_open_text_lable_size_base"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtTransactionHint"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/ac_open_monthly_transaction_limit_for_a_simplified_account_is_less_than_5_lac_taka"
+                            android:textSize="@dimen/ac_open_text_lable_size_base" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/account_type"
+                        android:textSize="15sp" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/spAccountType"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@color/white"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:hint="@string/ac_open_type_and_select_account_type_eng"
+                            android:inputType="text"
+                            android:paddingLeft="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivdropdownAccountType"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:src="@drawable/ac_open_down"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/vAccountType"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/ac_open_grey_20" />
+
+                <LinearLayout
+                    android:id="@+id/lltenor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txTenor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/ac_open_tenor_eng"
+                        android:textSize="15sp" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clTenor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/spTenor"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@color/white"
+                            android:editable="false"
+                            android:hint="@string/ac_open_type_and_select_tenor_eng"
+                            android:paddingLeft="10dp"
+                            android:paddingBottom="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivdropdownTenor"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:src="@drawable/ac_open_down"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/v_tenor"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/ac_open_grey_20" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txProduct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/ac_open_product_eng"
+                        android:textSize="15sp" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clDivision"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/spProduct"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@color/white"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:hint="@string/ac_open_type_and_select_product_eng"
+                            android:inputType="text"
+                            android:paddingLeft="10dp"
+                            android:paddingBottom="10dp"
+                            android:singleLine="true"
+
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivdropdown"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:src="@drawable/ac_open_down"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/v_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/ac_open_grey_20" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ttMonthlyLimit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <EditText
+                        android:id="@+id/edtLimit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:hint="@string/ac_open_monthly_transaction_limit"
+                        android:inputType="number"
+                        android:text="@string/ac_open_amount_1lac"
+                        android:textColor="@color/black"
+
+                        android:textColorHint="@color/black"
+                        android:visibility="gone" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="2">
+
+
+                    <Button
+                        android:id="@+id/btnSimplified"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/ac_open_btn_margin_base"
+                        android:layout_weight="1"
+                        android:background="@drawable/ac_open_btn_background_red"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:text="Simplified"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/ac_open_btn_text_size_base" />
+
+                    <Button
+                        android:id="@+id/btnRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_margin="@dimen/ac_open_btn_margin_base"
+                        android:layout_weight="1"
+                        android:background="@drawable/ac_open_btn_background_grey"
+                        android:clickable="false"
+                        android:text="Regular"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/ac_open_btn_text_size_base" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ac_open_btn_margin_base"
+                    android:background="@drawable/ac_open_round_button_blue"
+                    android:padding="@dimen/ac_open_btn_padding_base"
+                    android:text="@string/ac_open_open_account"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ac_open_btn_text_size_base" />
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+

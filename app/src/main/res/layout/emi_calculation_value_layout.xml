@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/report_layout_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/palli_receipt_details_round"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <ImageView
+                            android:id="@+id/iv_bill_logo"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="@dimen/margin_15"
+                            android:src="@drawable/bank_asia_icon_color" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:layout_marginBottom="@dimen/margin_10"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/emi_calculation"
+                            android:textColor="@color/black"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:layout_marginBottom="@dimen/margin_10"
+                            android:background="@color/black" />
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="@dimen/margin_15"
+                            android:padding="5dp"
+                            android:src="@drawable/emi_calc" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_height_base"
+                        android:layout_margin="0dp"
+                        android:background="@color/black"
+                        android:padding="0dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/emi_input_information"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_height_base"
+                        android:layout_margin="0dp"
+                        android:background="@color/black"
+                        android:padding="0dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/tv_amount_princpal_confirm_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:paddingLeft="10dp"
+                                android:text="@string/principal_amount_bdt"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_13"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="@dimen/divider_height_base"
+                                android:layout_height="match_parent"
+                                android:background="@color/black" />
+
+                            <TextView
+                                android:id="@+id/tv_amount_princpal_confirm"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:paddingLeft="10dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_13"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_margin="0dp"
+                            android:background="@color/black"
+                            android:padding="0dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/tv_interest_confirm_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:paddingLeft="10dp"
+                                android:text="@string/interest_rate"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_13"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="@dimen/divider_height_base"
+                                android:layout_height="match_parent"
+                                android:background="@color/black" />
+
+                            <TextView
+                                android:id="@+id/tv_interest_confirm"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:paddingLeft="@dimen/padding_10"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_13"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_margin="0dp"
+                            android:background="@color/black"
+                            android:padding="0dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/tv_year_time_confirm_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:paddingLeft="10dp"
+                                android:text="@string/month"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_13"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="@dimen/divider_height_base"
+                                android:layout_height="match_parent"
+                                android:background="@color/black" />
+
+                            <TextView
+                                android:id="@+id/tv_year_time_confirm"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:paddingLeft="@dimen/padding_10"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_13"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_height_base"
+                        android:layout_margin="0dp"
+                        android:background="@color/black"
+                        android:padding="0dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/emi_calculate_information"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_height_base"
+                        android:layout_margin="0dp"
+                        android:background="@color/black"
+                        android:padding="0dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/tv_loan_payable_per_month_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:paddingLeft="10dp"
+                                android:text="@string/loan_payable_per_month"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_13"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="@dimen/divider_height_base"
+                                android:layout_height="match_parent"
+                                android:background="@color/black" />
+
+                            <TextView
+                                android:id="@+id/tv_loan_payable_per_month"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:paddingLeft="10dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_13"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_margin="0dp"
+                            android:background="@color/black"
+                            android:padding="0dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/tv_total_interest_payable_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:paddingLeft="10dp"
+                                android:text="@string/total_interest_payable"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_13"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="@dimen/divider_height_base"
+                                android:layout_height="match_parent"
+                                android:background="@color/black" />
+
+                            <TextView
+                                android:id="@+id/tv_total_interest_payable"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:paddingLeft="10dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_13"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_margin="0dp"
+                            android:background="@color/black"
+                            android:padding="0dp" />
+
+                        <LinearLayout
+                            android:id="@+id/sewer_bill_lyt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/tv_total_payment_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:paddingLeft="10dp"
+                                android:text="@string/total_payment"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_13"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="@dimen/divider_height_base"
+                                android:layout_height="match_parent"
+                                android:background="@color/black" />
+
+                            <TextView
+                                android:id="@+id/tv_total_payment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:paddingLeft="10dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_13"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_height_base"
+                        android:layout_margin="0dp"
+                        android:background="@color/black"
+                        android:padding="0dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="@dimen/margin_5"
+                            android:text="@string/era_infotech_ltd"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_13"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_5"
+                android:layout_marginTop="@dimen/margin_20"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_save_image_emi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_5"
+                    android:layout_weight=".5"
+                    android:background="@drawable/btn_background_app_color"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_10"
+                    android:text="@string/save"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_edit_emi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_5"
+                    android:layout_weight=".5"
+                    android:background="@drawable/btn_background_app_color"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_10"
+                    android:text="@string/edit"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

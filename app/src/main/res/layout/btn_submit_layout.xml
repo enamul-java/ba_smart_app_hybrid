@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_button_height"
+        android:layout_marginStart="@dimen/button_margin_left"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/button_margin_right"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:background="@drawable/bt_background_rounded_app_color"
+        android:padding="@dimen/padding_5"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

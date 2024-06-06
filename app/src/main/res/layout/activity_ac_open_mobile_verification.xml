@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:fillViewport="true"
+android:fitsSystemWindows="true"
+android:orientation="vertical"
+tools:context=".presentation.home.remote.ac_open.view.AcOpenMobileVerificationActivity">
+
+<LinearLayout
+    android:id="@+id/toolbar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <include layout="@layout/header_layout_toolbar" />
+</LinearLayout>
+
+
+<LinearLayout
+    android:id="@+id/layout_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/toolbar_layout"
+
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:fillViewport="true"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lyt_send_for_verification"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <include layout="@layout/ac_open_verification_layout" />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:id="@+id/lyt_otp_verify"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:src="@drawable/icon_otp" />
+
+                <TextView
+                    android:id="@+id/tv_mobile_verification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_10"
+                    android:text="@string/verification"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/llVerify"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/lyt_otp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/text_input_layout_left_size"
+                        android:layout_marginTop="@dimen/text_input_layout_top_size"
+                        android:layout_marginEnd="@dimen/text_input_layout_right_size"
+                        android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+                        android:hint="@string/otp"
+                        android:padding="@dimen/padding_5"
+                        app:boxStrokeColor="@color/app_color"
+                        app:boxStrokeErrorColor="@color/app_color"
+                        app:passwordToggleEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_otp"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/input_field_height_size"
+                            android:inputType="textPassword"
+                            android:padding="@dimen/padding_5"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_18" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_margin="20dp"
+                    android:visibility="visible"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="["
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtMinValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" : "
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtSecValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="59"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="]"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_resend_otp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|clip_horizontal"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/ic_refresh"
+                        android:drawablePadding="2dp"
+                        android:text="Resend OTP"
+                        android:textColor="@color/app_color" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_submit_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_value"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/btn_submit_layout" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+
+</RelativeLayout>

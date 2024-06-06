@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/input_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/source_ac_no_balance_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/source_ac_no_balance_layout" />
+
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_input_layout_left_size"
+            android:layout_marginTop="@dimen/text_input_layout_top_size"
+            android:layout_marginEnd="@dimen/text_input_layout_right_size"
+            android:layout_marginBottom="@dimen/text_input_layout_bottom_size">
+
+            <ImageView
+                android:id="@+id/iv_select_primary_card"
+                android:layout_width="@dimen/input_field_height_size"
+                android:layout_height="@dimen/input_field_height_size"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/beneficiary_round_border_transparent"
+                android:padding="@dimen/beneficiary_image_padding_base"
+                android:src="@drawable/icon_search"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/primary_card_input"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/p_card_no"
+                android:padding="@dimen/padding_5"
+                app:boxStrokeColor="@color/app_color"
+                app:boxStrokeErrorColor="@color/app_color"
+                tools:layout_editor_absoluteX="4dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_primary_card_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_field_height_size"
+                    android:layout_marginEnd="@dimen/beneficiary_icon_margin_right_base"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none"
+                    android:padding="@dimen/padding_5"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_base" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lo_virtual_card_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_input_layout_left_size"
+            android:layout_marginTop="@dimen/text_input_layout_top_size"
+            android:layout_marginEnd="@dimen/text_input_layout_right_size"
+            android:layout_marginBottom="@dimen/text_input_layout_bottom_size">
+
+            <ImageView
+                android:id="@+id/iv_select_v_card"
+                android:layout_width="@dimen/input_field_height_size"
+                android:layout_height="@dimen/input_field_height_size"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/beneficiary_round_border_transparent"
+                android:padding="@dimen/beneficiary_image_padding_base"
+                android:src="@drawable/icon_search"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/virtual_card_selection"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/v_card_no"
+                android:padding="@dimen/padding_5"
+                app:boxStrokeColor="@color/app_color"
+                app:boxStrokeErrorColor="@color/app_color"
+                tools:layout_editor_absoluteX="4dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_virtual_card_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_field_height_size"
+                    android:layout_marginEnd="@dimen/beneficiary_icon_margin_right_base"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none"
+                    android:padding="@dimen/padding_5"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_base" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/destination_beneficiary_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <include layout="@layout/destination_beneficiary_info_layout" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_value"
+        android:orientation="vertical">
+
+        <include layout="@layout/btn_proceed_layout" />
+    </LinearLayout>
+
+
+</RelativeLayout>

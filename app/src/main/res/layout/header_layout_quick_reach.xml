@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:viewBindingIgnore="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="false"
+        android:background="@drawable/header_background_gradiant"
+        android:gravity="center"
+        app:theme="@style/ToolbarColoredBackArrow"
+        app:titleTextColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <ImageView
+                android:id="@+id/iv_header_back"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/quick_reach_icon_height"
+                android:layout_gravity="start"
+                android:layout_marginLeft="@dimen/quick_reach_icon_margin_left"
+                android:layout_weight="4"
+                android:paddingTop="@dimen/padding_5"
+                android:paddingRight="@dimen/padding_5"
+                android:paddingBottom="@dimen/padding_5"
+                android:src="@drawable/icon_ba"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="-15dp"
+                android:layout_weight="2.5"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/smart_app"
+                android:textColor="@color/white"
+                android:textSize="@dimen/toolbar_quick_reach_textsize_base"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_languag_eng"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_10"
+                android:layout_weight="3.5"
+                android:background="@drawable/btn_round_border_transparent_white"
+                android:padding="@dimen/padding_5"
+                android:text="@string/english"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_base" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_languag_bangla"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_10"
+                android:layout_weight="3.5"
+                android:background="@drawable/btn_round_border_transparent_white"
+                android:padding="@dimen/padding_5"
+                android:text="@string/bangla_bangla"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_base"
+                android:visibility="gone" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+</RelativeLayout>

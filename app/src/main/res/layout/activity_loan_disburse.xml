@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".presentation.welcome.loan.screen.LoanDisburseActivity">
+
+    <LinearLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include layout="@layout/header_layout_toolbar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbar_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/loan_success_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="@dimen/main_layout_maring_top_base"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <include layout="@layout/loan_disburse_info_v2" />
+                    </LinearLayout>
+<!---
+                <LinearLayout
+                    android:id="@+id/loan_input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="@dimen/main_layout_maring_top_base"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <include layout="@layout/loan_disburse_info" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/loan_input_confirm_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="@dimen/main_layout_maring_top_base"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <include layout="@layout/loan_disburse_confirm" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/loan_success_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="@dimen/main_layout_maring_top_base"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <include layout="@layout/loan_success_layout" />
+                </LinearLayout>
+
+                    -->
+                </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_loan_disburse_success"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <include layout="@layout/loan_disburse_success" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_loan_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <include layout="@layout/loan_cancel" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

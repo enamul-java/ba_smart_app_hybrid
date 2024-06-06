@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.welcome.binimoy.screen.BinimoyResistrationRequest">
+
+    <LinearLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include layout="@layout/header_layout_toolbar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ac_selection_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/source_ac_no_balance_layoutold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_confirm_ac_selection"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/signup_button_height"
+            android:layout_marginHorizontal="@dimen/margin_30"
+            android:layout_marginTop="@dimen/margin_30"
+            android:background="@drawable/bt_background_rounded_ac_signup"
+            android:text="Continue"
+            android:textColor="@color/button_text_color"
+            android:textSize="@dimen/textsize_base" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/first_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/source_ac_no_balance_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/source_ac_no_balance_layout" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_selected_ac"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_5"
+            android:layout_marginVertical="@dimen/margin_1"
+            android:hint="Source Account No"
+            android:padding="@dimen/padding_5"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_selected_ac"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_field_height_size"
+                android:editable="false"
+                android:enabled="false"
+                android:focusable="false"
+                android:inputType="text"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_base" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_binimoy_user_id"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_5"
+                android:layout_marginVertical="@dimen/margin_1"
+                android:hint="Create / Existing Binimoy Virtual ID "
+                android:padding="@dimen/padding_5">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_binimoy_user_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_field_height_size"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_base" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:paddingEnd="@dimen/padding_20"
+                android:text="@string/binimoy"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_base" />
+        </RelativeLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_binimoy_alias"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_5"
+            android:layout_marginVertical="@dimen/margin_1"
+            android:hint="Alias*"
+            android:padding="@dimen/padding_5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_binimoy_alias"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_field_height_size"
+                android:inputType="text"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_base" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_binimoy_mobile"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_5"
+            android:layout_marginVertical="@dimen/margin_1"
+            android:hint="@string/mobile_no"
+            android:padding="@dimen/padding_5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_binimoy_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_field_height_size"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_base" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_continue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/signup_button_height"
+            android:layout_marginHorizontal="@dimen/margin_30"
+            android:layout_marginTop="@dimen/margin_30"
+            android:background="@drawable/bt_background_rounded_ac_signup"
+            android:text="Continue"
+            android:textColor="@color/button_text_color"
+            android:textSize="@dimen/textsize_base" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/second_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_binimoy_pin"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_5"
+            android:layout_marginVertical="@dimen/margin_1"
+            android:hint="Set Binimoy PIN"
+            android:padding="@dimen/padding_5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_binimoy_pin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_field_height_size"
+                android:inputType="numberPassword"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_base" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_binimoy_confirm_pin"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_5"
+            android:layout_marginVertical="@dimen/margin_1"
+            android:hint="Confirm Binimoy PIN"
+            android:padding="@dimen/padding_5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_binimoy_confirm_pin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_field_height_size"
+                android:inputType="numberPassword"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_base" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/signup_button_height"
+            android:layout_marginHorizontal="@dimen/margin_30"
+            android:layout_marginTop="@dimen/margin_30"
+            android:background="@drawable/bt_background_rounded_ac_signup"
+            android:text="Confirm"
+            android:textColor="@color/button_text_color"
+            android:textSize="@dimen/textsize_base" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/success_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include layout="@layout/binimoy_reg_success_layout" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

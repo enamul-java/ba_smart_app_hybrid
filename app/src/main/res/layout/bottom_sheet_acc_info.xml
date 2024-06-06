@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_80"
+    android:background="@color/float_transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_10">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_account_details_level"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="@dimen/input_padding_letf_base"
+                android:text="@string/account_details"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_base"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="@dimen/dialog_close_icon_size"
+                android:layout_height="@dimen/dialog_close_icon_size"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_close" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_casa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:layout_weight="1"
+                android:background="@drawable/btn_round_border_ac_info_select"
+                android:singleLine="true"
+                android:stateListAnimator="@null"
+                android:text="@string/casa"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_base" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_fdr_dps"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:layout_weight="1"
+                android:background="@drawable/btn_round_border_transparent_unselect"
+                android:singleLine="true"
+                android:stateListAnimator="@null"
+                android:text="@string/fdr_dps"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_base" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_loan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:layout_weight="1"
+                android:background="@drawable/btn_round_border_transparent_unselect"
+                android:singleLine="true"
+                android:stateListAnimator="@null"
+                android:text="@string/loan"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_base" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_credit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_round_border_transparent_unselect"
+                android:singleLine="true"
+                android:stateListAnimator="@null"
+                android:text="@string/credit_cards"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_base"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ac_infor_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+         <LinearLayout
+            android:id="@+id/utility_bill_type_dropdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <include layout="@layout/utility_bill_type_dropdown" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_marginRight="@dimen/margin_5"
+            android:weightSum="3">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_today"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/prepost_paid_height_base"
+                android:layout_margin="@dimen/margin_5"
+                android:layout_weight="1"
+                android:background="@drawable/btn_round_border_statement_today"
+                android:text="@string/today"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_base" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLastWeek"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/prepost_paid_height_base"
+                android:layout_margin="@dimen/margin_5"
+                android:layout_weight="1"
+                android:background="@drawable/btn_round_border_statement_last_week"
+                android:text="@string/last_week"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_base" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLastMonth"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/prepost_paid_height_base"
+                android:layout_margin="@dimen/margin_5"
+                android:layout_weight="1"
+                android:background="@drawable/btn_round_border_transparent_unselect"
+                android:text="@string/last_month"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_base" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/padding_5"
+            android:text="@string/search_with_custom_date_range"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_base"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/from_date_input"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_marginRight="@dimen/margin_5"
+                android:layout_weight="1"
+                android:hint="@string/from_date"
+                android:padding="@dimen/padding_5">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_from_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:clickable="false"
+                    android:drawableEnd="@drawable/ic_date"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none"
+                    android:longClickable="false"
+                    android:paddingStart="@dimen/padding_10"
+                    android:paddingTop="@dimen/padding_5"
+                    android:paddingEnd="@dimen/padding_10"
+                    android:paddingBottom="@dimen/padding_5"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_base"
+                    app:endIconDrawable="@drawable/ic_date" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/to_date_input"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_marginRight="@dimen/margin_5"
+                android:layout_weight="1"
+                android:hint="@string/to_date"
+                android:padding="@dimen/padding_5">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_to_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:clickable="false"
+                    android:drawableEnd="@drawable/ic_date"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none"
+                    android:longClickable="false"
+                    android:paddingStart="@dimen/padding_10"
+                    android:paddingTop="@dimen/padding_5"
+                    android:paddingEnd="@dimen/padding_10"
+                    android:paddingBottom="@dimen/padding_5"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_base" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/btn_search_layout" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</LinearLayout>

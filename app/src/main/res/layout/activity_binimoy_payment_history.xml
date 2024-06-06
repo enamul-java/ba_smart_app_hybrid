@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.welcome.binimoy.screen.BinimoyResistrationRequest">
+
+    <LinearLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include layout="@layout/header_layout_toolbar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ac_selection_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/source_ac_no_balance_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/source_ac_no_balance_layout" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_confirm_ac_selection"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/signup_button_height"
+            android:layout_marginHorizontal="@dimen/margin_30"
+            android:layout_marginTop="@dimen/margin_30"
+            android:background="@drawable/bt_background_rounded_ac_signup"
+            android:text="Continue"
+            android:textColor="@color/button_text_color"
+            android:textSize="@dimen/textsize_base" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

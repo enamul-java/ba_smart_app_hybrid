@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:fillViewport="true"
+android:fitsSystemWindows="true"
+android:orientation="vertical"
+    android:background="@color/white"
+tools:context=".presentation.home.remote.ac_open.view.AcOpenCustomCameraActivity">
+
+<LinearLayout
+    android:id="@+id/toolbar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <include layout="@layout/header_layout_toolbar" />
+</LinearLayout>
+
+    <SurfaceView
+        android:layout_marginTop="62dp"
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top|center"
+        android:visibility="visible"
+        android:background="@drawable/ic_custom_camera_box"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_vertical"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtHint1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/keep_your_smart_card_into_the_frame"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txtHint2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/capture_your_smart_card"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="gone" />
+        <TextView
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            android:id="@+id/tv_capture"
+            android:layout_gravity="center"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/round_circle"
+            />
+    </LinearLayout>
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:id="@+id/progressBar_cyclic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/white"
+        android:minHeight="80dp"
+        android:minWidth="80dp" />
+
+    <ImageView
+        android:id="@+id/iv_picture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/llBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="2">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:id="@+id/btnTry"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ac_open_button_height"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bt_background_rounded_app_color"
+            android:text="@string/try_again"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ac_open_button_height"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bt_background_rounded_app_color"
+            android:text="@string/next"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

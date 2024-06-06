@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "eraapps.bankasia.bdinternetbanking.apps",
+  "variantName": "nanoRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 29,
+      "versionName": "2.0.2",
+      "outputFile": "app-nano-release.apk"
+    }
+  ],
+  "elementType": "File"
+}

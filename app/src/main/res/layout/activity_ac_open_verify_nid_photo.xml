@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:fillViewport="true"
+android:fitsSystemWindows="true"
+android:orientation="vertical"
+tools:context=".presentation.home.remote.ac_open.view.AcOpenVerifyNidPhotoActivity">
+
+<LinearLayout
+    android:id="@+id/toolbar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <include layout="@layout/header_layout_toolbar" />
+</LinearLayout>
+
+
+<LinearLayout
+    android:id="@+id/layout_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/toolbar_layout"
+
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:fillViewport="true"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="2">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_marginBottom="@dimen/margin_5"
+                    android:layout_weight="1"
+                    android:elevation="5dp"
+                    android:padding="@dimen/padding_5"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:background="@color/white"
+                        android:gravity="center">
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/lyt_iv_old_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:elevation="5dp"
+                            android:gravity="center"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="5dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/ivOldImage"
+                                android:layout_width="220dp"
+                                android:layout_height="220dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/icon_image_placeholder" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="200dp"
+                            android:background="@color/white"
+                            android:elevation="5dp"
+                            android:translationZ="90dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="25dp"
+                            app:cardElevation="5dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/lyt_iv_old_photo"
+                            app:layout_constraintStart_toStartOf="@+id/lyt_iv_old_photo"
+                            app:layout_constraintTop_toTopOf="@+id/lyt_iv_old_photo">
+
+                            <ImageView
+                                android:id="@+id/iv_uploadOldPhoto"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:visibility="gone"
+                                android:padding="5dp"
+                                android:src="@drawable/icon_upload" />
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:elevation="5dp"
+                    android:padding="@dimen/padding_5"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp">
+
+                    <Button
+                        android:id="@+id/btnimgEdit"
+                        android:layout_width="@dimen/edit_view_icon_width_base"
+                        android:layout_height="@dimen/edit_view_icon_width_base"
+                        android:layout_gravity="right"
+                        android:layout_marginBottom="-80dp"
+                        android:background="@drawable/icon_edit"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:visibility="visible" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:background="@color/white"
+                        android:gravity="center">
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/lyt_ivLivePhoto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:elevation="5dp"
+                            android:gravity="center"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="5dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/ivLivePhoto"
+                                android:layout_width="220dp"
+                                android:layout_height="220dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/icon_image_placeholder" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="200dp"
+                            android:background="@color/white"
+                            android:elevation="5dp"
+                            android:translationZ="90dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="25dp"
+                            app:cardElevation="5dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/lyt_ivLivePhoto"
+                            app:layout_constraintStart_toStartOf="@+id/lyt_ivLivePhoto"
+                            app:layout_constraintTop_toTopOf="@+id/lyt_ivLivePhoto">
+
+                            <ImageView
+                                android:id="@+id/iv_uploadLivePhoto"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:padding="5dp"
+                                android:src="@drawable/icon_upload" />
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                  </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/txtTakeSelfi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/take_a_selfie"
+                    android:textAlignment="center"
+                    android:textColor="@color/app_color"
+                    android:textSize="20sp"
+                    android:visibility="gone">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:clickable="true"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:visibility="gone">
+
+                    <ProgressBar
+                        android:id="@+id/pB"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="500dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="20dp"
+                        android:max="100"
+                        android:paddingRight="10dp" />
+
+                    <TextView
+                        android:id="@+id/textview"
+                        android:layout_width="500dp"
+                        android:layout_height="50dp"
+                        android:layout_alignBottom="@id/pB"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:text="Tab and Hold for Submit"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_verify"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="@dimen/margin_80"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:layout_marginEnd="@dimen/margin_80"
+                        android:layout_marginBottom="@dimen/margin_10"
+                        android:background="@drawable/bt_background_rounded_app_color"
+                        android:padding="@dimen/padding_5"
+                        android:text="@string/verify"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+
+</RelativeLayout>

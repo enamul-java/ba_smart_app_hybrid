@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_20"
+            android:paddingRight="@dimen/padding_20"
+            android:layout_marginLeft="@dimen/margin_2"
+            android:layout_marginRight="@dimen/margin_2"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_marginBottom="@dimen/margin_5"
+            app:cardBackgroundColor="@color/white"
+            android:elevation="@dimen/margin_5"
+            app:cardCornerRadius="@dimen/margin_5"
+            app:cardElevation="@dimen/margin_5"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_atm_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hints_login_edittext_color"
+                    android:textSize="@dimen/textsize_15"
+                    android:text="ATM Location 1"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/padding_10"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".1"
+                        android:src="@drawable/ic_menu_atm"/>
+                    <TextView
+                        android:id="@+id/tv_atm_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:textColor="@color/grey_font"
+                        android:paddingStart="@dimen/padding_10"
+                        android:singleLine="true"
+                        android:textColorHint="@color/hints_login_edittext_color"
+                        android:textSize="@dimen/textsize_12"
+                        android:gravity="center_vertical|left"
+                        android:text="111-113, Motijheel C/A post code-1000 Dhaka"/>
+
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:id="@+id/tv_atm_location_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/input_padding_letf_base"
+                    android:paddingRight="@dimen/input_padding_right_base"
+                    android:paddingBottom="@dimen/input_padding_bottom_base"
+                    android:paddingTop
+                        ="@dimen/input_padding_bottom_base"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:textColor="@color/textView_login_edittext_color"
+                    android:textSize="@dimen/textsize_base"
+                    android:text="See Map"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+</LinearLayout>

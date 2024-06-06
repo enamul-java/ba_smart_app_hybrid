@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_update_mfs_beneficiary_level"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingStart="@dimen/input_padding_letf_base"
+                android:text="@string/early_settlement"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_base"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="@dimen/dialog_close_icon_size"
+                android:layout_height="@dimen/dialog_close_icon_size"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_close" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:outlineAmbientShadowColor="@color/app_color"
+                    android:outlineSpotShadowColor="@color/app_color"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="@dimen/margin_5"
+                    app:cardUseCompatPadding="true"
+                    app:elevation="0dp"
+                    card_view:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:id="@+id/ac_no_balance_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/lo_full_adjustment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/merchant_info_bg_round_confirm"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="@dimen/padding_10">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/confirm_label_margin_base"
+                                    android:layout_weight="2"
+                                    android:orientation="horizontal"
+                                    android:padding="@dimen/confirm_label_padding_base">
+
+                                    <TextView
+                                        android:id="@+id/tv_due_amount_label"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/principal_amount"
+                                        android:textColor="@color/merchant_lebel_text_color"
+                                        android:textSize="@dimen/textsize_base" />
+
+                                    <TextView
+                                        android:id="@+id/tv_due_amount_value"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="end"
+                                        android:textColor="@color/merchant_value_text_color"
+                                        android:textSize="@dimen/textsize_base" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/lo_interest"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/divider_height_base"
+                                        android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                                        android:layout_marginRight="@dimen/confirm_label_padding_base"
+                                        android:background="@color/confirm_divider_bg_color" />
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/confirm_label_margin_base"
+                                        android:layout_weight="2"
+                                        android:orientation="horizontal"
+                                        android:padding="@dimen/confirm_label_padding_base">
+
+                                        <TextView
+                                            android:id="@+id/tv_interest_label"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="@string/interest_amount"
+                                            android:textColor="@color/merchant_lebel_text_color"
+                                            android:textSize="@dimen/textsize_base" />
+
+                                        <TextView
+                                            android:id="@+id/tv_interest_amount"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:gravity="end"
+                                            android:textColor="@color/merchant_value_text_color"
+                                            android:textSize="@dimen/textsize_base" />
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/divider_height_base"
+                                    android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                                    android:layout_marginRight="@dimen/confirm_label_padding_base"
+                                    android:background="@color/confirm_divider_bg_color" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/confirm_label_margin_base"
+                                    android:layout_weight="2"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical|clip_horizontal|left"
+                                    android:padding="@dimen/confirm_label_padding_base">
+
+                                    <TextView
+                                        android:id="@+id/tv_payable_amount_label"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Final Settlement Amount"
+                                        android:textColor="@color/merchant_lebel_text_color"
+                                        android:textSize="@dimen/textsize_base" />
+
+                                    <TextView
+                                        android:id="@+id/tv_payable_amount_value"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="end"
+                                        android:minHeight="30dp"
+                                        android:textColor="@color/merchant_value_text_color"
+                                        android:textSize="@dimen/textsize_base" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lo_pertial_adjustment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/merchant_info_bg_round_confirm"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="@dimen/padding_10">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/confirm_label_margin_base"
+                                    android:layout_weight="2"
+                                    android:orientation="horizontal"
+                                    android:padding="@dimen/confirm_label_padding_base">
+
+                                    <TextView
+                                        android:id="@+id/tv_wallet_number_label_par"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/account_no"
+                                        android:textColor="@color/merchant_lebel_text_color"
+                                        android:textSize="@dimen/textsize_base" />
+
+                                    <TextView
+                                        android:id="@+id/tv_account_no_par"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="end"
+                                        android:textColor="@color/merchant_value_text_color"
+                                        android:textSize="@dimen/textsize_base" />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/divider_height_base"
+                                    android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                                    android:layout_marginRight="@dimen/confirm_label_padding_base"
+                                    android:background="@color/confirm_divider_bg_color" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/confirm_label_margin_base"
+                                    android:layout_weight="2"
+                                    android:orientation="horizontal"
+                                    android:padding="@dimen/confirm_label_padding_base">
+
+                                    <TextView
+                                        android:id="@+id/tv_wallet_title_label_par"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/settlement_amount"
+                                        android:textColor="@color/merchant_lebel_text_color"
+                                        android:textSize="@dimen/textsize_base" />
+
+                                    <TextView
+                                        android:id="@+id/tv_settlement_amount_par"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="end"
+                                        android:textColor="@color/merchant_value_text_color"
+                                        android:textSize="@dimen/textsize_base" />
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_10"
+                    android:weightSum="2">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_cancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/prepost_paid_height_base"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_background_app_color"
+                        android:stateListAnimator="@null"
+                        android:text="@string/cancel"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/prepost_paid_height_base"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_background_app_color"
+                        android:stateListAnimator="@null"
+                        android:text="@string/submit"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_base" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

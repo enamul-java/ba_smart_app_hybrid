@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_5">
+
+                    <TextView
+                        android:id="@+id/tv_select_mobile_no_level"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/input_padding_letf_base"
+                        android:text="@string/select_mobile_number"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ivClose"
+                        android:layout_width="@dimen/dialog_close_icon_size"
+                        android:layout_height="@dimen/dialog_close_icon_size"
+                        android:layout_gravity="end"
+                        android:src="@drawable/ic_close" />
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/inputSearchRecent"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_field_height_size"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:drawableLeft="@drawable/icon_search"
+                    android:drawablePadding="@dimen/padding_5"
+                    android:hint="@string/mobile_number"
+                    android:inputType="text"
+                    android:paddingLeft="@dimen/input_padding_letf_base"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_base" />
+
+                <EditText
+                    android:id="@+id/inputSearchAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_field_height_size"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:drawableLeft="@drawable/icon_search"
+                    android:drawablePadding="@dimen/padding_5"
+                    android:hint="@string/mobile_number"
+                    android:inputType="text"
+                    android:paddingLeft="@dimen/input_padding_letf_base"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_base"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/input_padding_letf_base"
+        android:paddingRight="@dimen/input_padding_letf_base">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/tv_recent_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/prepost_paid_height_base"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_round_border_transparent_select"
+                    android:stateListAnimator="@null"
+                    android:text="@string/recent_contact"
+                    android:textAllCaps="false"
+                    android:textColor="@color/select_text_color"
+                    android:textSize="@dimen/textsize_base" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/tv_all_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/prepost_paid_height_base"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_round_border_transparent_unselect"
+                    android:stateListAnimator="@null"
+                    android:text="@string/all_contacts"
+                    android:textAllCaps="false"
+                    android:textColor="@color/unselect_text_color"
+                    android:textSize="@dimen/textsize_base" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/recent_contact_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_5"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recentContactRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/all_contact_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_5"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/allContactRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

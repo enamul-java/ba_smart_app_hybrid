@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/input_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding_10"
+            android:paddingTop="@dimen/padding_10"
+            android:paddingRight="@dimen/padding_10"
+            android:paddingBottom="@dimen/padding_10">
+
+            <TextView
+                android:id="@+id/tv_card_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/card_type"
+                android:textColor="@color/text_label_color"
+                android:textSize="@dimen/textsize_base" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/visa_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_5"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_round_border_transparent_unselect"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/eft_npsb_rths_icon_size_base"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_5"
+                        android:src="@drawable/icon_visa" />
+
+                    <TextView
+                        android:id="@+id/tv_visa"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/visa_card"
+                        android:textColor="@color/unselect_text_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/master_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_round_border_transparent_unselect"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/eft_npsb_rths_icon_size_base"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_5"
+                        android:src="@drawable/icon_master" />
+
+                    <TextView
+                        android:id="@+id/tv_master"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/master"
+                        android:textColor="@color/unselect_text_color" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/destination_beneficiary_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <include layout="@layout/destination_beneficiary_info_layout" />
+        </LinearLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cardno_input"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/text_input_layout_left_size"
+            android:layout_marginTop="@dimen/text_input_layout_top_size"
+            android:layout_marginEnd="@dimen/text_input_layout_right_size"
+            android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+            android:hint="@string/card_no"
+            android:padding="@dimen/padding_5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_card_no_value"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_field_height_size"
+                android:inputType="number"
+                android:maxLength="19"
+                android:padding="@dimen/padding_5"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_base" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_submit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_40"
+        android:layout_below="@+id/input_value"
+        android:orientation="vertical">
+
+        <include layout="@layout/btn_submit_layout" />
+    </LinearLayout>
+
+
+</RelativeLayout>

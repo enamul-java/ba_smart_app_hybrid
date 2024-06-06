@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llVerify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_20">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+         >
+
+            <EditText
+                android:id="@+id/etOtp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="@string/ac_open_enter_otp_her_mobile"
+                android:inputType="text"
+                android:maxLength="11"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:id="@+id/btnVerity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ac_open_btn_margin_base"
+            android:layout_marginBottom="@dimen/ac_open_btn_margin_base"
+            android:background="@drawable/ac_open_round_button_blue"
+            android:gravity="center"
+            android:padding="@dimen/ac_open_btn_padding_base"
+            android:text="@string/verify"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ac_open_btn_text_size_base" />
+
+
+        <TextView
+            android:id="@+id/tvResendOTP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ac_open_resend"
+            android:textStyle="bold"
+            android:visibility="visible"
+            android:padding="@dimen/margin_5"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_20"
+
+            android:textSize="@dimen/textsize_base" />
+    </LinearLayout>
+</LinearLayout>

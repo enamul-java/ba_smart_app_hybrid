@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginRight="5dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/login_card_corner_radius_base"
+                app:cardElevation="@dimen/login_card_elevation_base">
+
+                <ImageView
+                    android:id="@+id/ivClose"
+                    android:layout_width="@dimen/welcome_menu_icon_height_base"
+                    android:layout_height="@dimen/welcome_menu_icon_height_base"
+                    android:layout_gravity="right"
+                    android:backgroundTint="@color/black"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_clear_black_24dp" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_quick_search_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/input_padding_letf_base"
+                        android:paddingTop="@dimen/input_padding_top_base"
+                        android:paddingRight="@dimen/input_padding_right_base"
+                        android:text="@string/quick_search"
+                        android:textColor="@color/textView_login_edittext_color"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <EditText
+                        android:id="@+id/inputSearch1"
+                        android:layout_width="match_parent"
+                        android:layout_height="53dp"
+                        android:background="@color/white"
+                        android:hint="@string/enter_account_title_or_account_no"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/input_padding_letf_base"
+                        android:paddingBottom="@dimen/input_padding_bottom_base"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/dialog1RecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:scrollbars="vertical" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

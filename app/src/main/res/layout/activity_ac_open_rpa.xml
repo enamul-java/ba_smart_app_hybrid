@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:fillViewport="true"
+android:fitsSystemWindows="true"
+android:orientation="vertical"
+tools:context=".presentation.home.remote.ac_open.view.AcOpenRpaActivity">
+
+<LinearLayout
+    android:id="@+id/toolbar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <include layout="@layout/header_layout_toolbar" />
+</LinearLayout>
+
+
+<LinearLayout
+    android:id="@+id/layout_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/toolbar_layout"
+
+    android:orientation="vertical">
+
+    <ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:fillViewport="true"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ac_open_nid_verif" />
+
+            <LinearLayout
+                android:id="@+id/lyt_nid_no_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lyt_nid_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/text_input_layout_left_size"
+                    android:layout_marginTop="@dimen/text_input_layout_top_size"
+                    android:layout_marginEnd="@dimen/text_input_layout_right_size"
+                    android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+                    android:hint="@string/name"
+                    android:padding="@dimen/padding_5"
+                    app:boxStrokeColor="@color/app_color"
+                    app:boxStrokeErrorColor="@color/app_color"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_nid_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/input_field_height_size"
+                        android:inputType="number"
+                        android:maxLength="19"
+                        android:padding="@dimen/padding_5"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:enabled="false"
+                        android:textSize="@dimen/textsize_18"
+                        android:visibility="gone"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lyt_nid_no"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/text_input_layout_left_size"
+                    android:layout_marginTop="@dimen/text_input_layout_top_size"
+                    android:layout_marginEnd="@dimen/text_input_layout_right_size"
+                    android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+                    android:hint="@string/nid_no"
+                    android:padding="@dimen/padding_5"
+                    app:boxStrokeColor="@color/app_color"
+                    app:boxStrokeErrorColor="@color/app_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_nid_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/input_field_height_size"
+                        android:inputType="number"
+                        android:maxLength="19"
+                        android:padding="@dimen/padding_5"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:enabled="false"
+                        android:textSize="@dimen/textsize_18" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lyt_date_of_birth"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:layout_marginRight="@dimen/margin_5"
+                    android:layout_weight="1"
+                    android:hint="@string/date_of_birth"
+                    android:padding="@dimen/padding_5"
+                    app:boxStrokeColor="@color/app_color"
+                    app:boxStrokeErrorColor="@color/app_color"
+                    app:endIconDrawable="@drawable/ic_date"
+                    app:endIconMode="custom">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_date_of_birth"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/input_field_height_size"
+                        android:inputType="date"
+                        android:padding="@dimen/padding_5"
+                        android:singleLine="true"
+                        android:enabled="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_18" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/btn_next_layout" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+
+</RelativeLayout>

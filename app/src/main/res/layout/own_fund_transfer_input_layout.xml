@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/input_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/source_ac_no_balance_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/source_ac_no_balance_layout" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_beneficiary_management"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:gravity="end"
+            android:paddingEnd="@dimen/padding_10"
+            android:text="@string/beneficiary_management"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/textsize_base" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_input_layout_left_size"
+            android:layout_marginTop="@dimen/text_input_layout_top_size"
+            android:layout_marginEnd="@dimen/text_input_layout_right_size"
+            android:layout_marginBottom="@dimen/text_input_layout_bottom_size">
+
+            <ImageView
+                android:id="@+id/iv_select_beneficiary"
+                android:layout_width="@dimen/input_field_height_size"
+                android:layout_height="@dimen/input_field_height_size"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/beneficiary_round_border_transparent"
+                android:padding="@dimen/beneficiary_image_padding_base"
+                android:src="@drawable/icon_search"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/account_number_input"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/enter_account_no"
+                android:padding="@dimen/padding_5"
+                tools:layout_editor_absoluteX="4dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_account_number_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_field_height_size"
+                    android:layout_marginEnd="@dimen/beneficiary_icon_margin_right_base"
+                    android:inputType="textCapWords"
+                    android:maxLength="13"
+                    android:padding="@dimen/padding_5"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_base" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/own_beneficiary_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <include layout="@layout/own_beneficiary_info_layout" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_check_limit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:gravity="end"
+            android:paddingEnd="@dimen/padding_10"
+            android:text="@string/check_limit"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/textsize_base" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/amount_input"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/text_input_layout_left_size"
+            android:layout_marginTop="@dimen/text_input_layout_top_size"
+            android:layout_marginEnd="@dimen/text_input_layout_right_size"
+            android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+            android:hint="@string/amount"
+            android:padding="@dimen/padding_5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_amount_value"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_field_height_size"
+                android:inputType="numberDecimal"
+                android:padding="@dimen/padding_5"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_base" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/remarks_input"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/text_input_layout_left_size"
+            android:layout_marginTop="@dimen/text_input_layout_top_size"
+            android:layout_marginEnd="@dimen/text_input_layout_right_size"
+            android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+            android:hint="@string/enter_remarks"
+            android:padding="@dimen/padding_5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_remarks_value"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_field_height_size"
+                android:inputType="text"
+                android:padding="@dimen/padding_5"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_base" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_value"
+        android:orientation="vertical">
+
+        <include layout="@layout/btn_proceed_layout" />
+    </LinearLayout>
+
+
+</RelativeLayout>

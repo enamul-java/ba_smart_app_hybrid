@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="@dimen/margin_10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/linear_layout_round_confirm"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:weightSum="2">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="@string/shadhin_card_number"
+                        android:textColor="@color/edittext_lable_color"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="@string/colon"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <TextView
+                        android:id="@+id/tv_amount_shadhin_card_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".6"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="@string/zero"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height_base"
+                    android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                    android:layout_marginRight="@dimen/confirm_label_padding_base"
+                    android:background="@color/confirm_divider_bg_color" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="@string/account_id"
+                        android:textColor="@color/edittext_lable_color"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="@string/colon"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <TextView
+                        android:id="@+id/tv_amount_account_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".6"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="@string/zero"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height_base"
+                    android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                    android:layout_marginRight="@dimen/confirm_label_padding_base"
+                    android:background="@color/confirm_divider_bg_color" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height_base"
+                    android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                    android:layout_marginRight="@dimen/confirm_label_padding_base"
+                    android:background="@color/confirm_divider_bg_color" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_receiving_account_lavel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="@string/payoneer_account_balance"
+                        android:textColor="@color/edittext_lable_color"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="@string/colon"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+
+                    <TextView
+                        android:id="@+id/tv_amount_account_balance"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".6"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="@string/zero"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_base" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height_base"
+                    android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                    android:layout_marginRight="@dimen/confirm_label_padding_base"
+                    android:background="@color/confirm_divider_bg_color" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_10">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/mamount_input"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginTop="@dimen/text_input_layout_top_size"
+
+                        android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+                        android:hint="@string/usd_amount"
+                        android:padding="@dimen/padding_5">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/input_field_height_size"
+                            android:inputType="number"
+                            android:padding="@dimen/padding_5"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_base" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:layout_marginTop="@dimen/text_input_layout_top_size"
+
+                            android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+                            android:hint="@string/remarks"
+                            android:padding="@dimen/padding_5">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_remarks"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/input_field_height_size"
+                                android:inputType="textPersonName"
+                                android:padding="@dimen/padding_5"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/checkbox_lyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/chk_sure_checkbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:padding="@dimen/margin_2"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_base" />
+
+                        <TextView
+                            android:id="@+id/terms_condition"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="2dp"
+                            android:text="@string/comfire_registration"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_base"
+                            android:visibility="visible" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/input_value"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/btn_proceed_layout" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

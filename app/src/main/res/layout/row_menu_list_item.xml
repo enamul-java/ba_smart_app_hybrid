@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_1"
+        android:layout_marginBottom="@dimen/margin_1"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:id="@+id/full_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/iv_menu_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="@dimen/padding_5"
+                android:src="@drawable/icon_npsb" />
+
+            <TextView
+                android:id="@+id/tv_display_menu_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="@string/_50_000_00_bdt"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_base"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_optional_value"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/textsize_base" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

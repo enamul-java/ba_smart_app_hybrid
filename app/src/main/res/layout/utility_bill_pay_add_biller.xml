@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/input_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nick_name_input"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/text_input_layout_left_size"
+            android:layout_marginTop="@dimen/text_input_layout_top_size"
+            android:layout_marginEnd="@dimen/text_input_layout_right_size"
+            android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+            android:hint="@string/nick_name"
+            android:padding="@dimen/padding_5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_nick_name_value"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_field_height_size"
+                android:inputType="textCapSentences"
+                android:padding="@dimen/padding_5"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_base" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mobile_no_input"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/text_input_layout_left_size"
+            android:layout_marginTop="@dimen/text_input_layout_top_size"
+            android:layout_marginEnd="@dimen/text_input_layout_right_size"
+            android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+            android:hint="@string/mobile_no_optional"
+            android:padding="@dimen/padding_5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_mobile_no_value"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_field_height_size"
+                android:inputType="number"
+                android:padding="@dimen/padding_5"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_base" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_address_input"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/text_input_layout_left_size"
+            android:layout_marginTop="@dimen/text_input_layout_top_size"
+            android:layout_marginEnd="@dimen/text_input_layout_right_size"
+            android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+            android:hint="@string/email_address_optional"
+            android:padding="@dimen/padding_5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_email_address_value"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_field_height_size"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/padding_5"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_base" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_value"
+        android:layout_marginTop="@dimen/margin_20"
+        android:orientation="vertical">
+
+        <include layout="@layout/btn_add_biller_layout" />
+    </LinearLayout>
+
+
+</RelativeLayout>

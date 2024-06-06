@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_header_login"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/header_height_base"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_20">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/header_image_height_base"
+            android:layout_height="@dimen/header_image_height_base"
+            android:layout_gravity="center"
+            app:cardCornerRadius="@dimen/margin_10">
+
+            <ImageView
+                android:id="@+id/iv_bank_asia_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_search" />
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

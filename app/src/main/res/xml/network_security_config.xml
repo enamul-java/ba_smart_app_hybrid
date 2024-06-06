@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config xmlns:android="http://schemas.android.com/apk/res/android">
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">202.40.191.226</domain>
+        <domain includeSubdomains="false">103.17.69.144</domain>
+        <domain includeSubdomains="false">10.11.201.133</domain>
+        <domain includeSubdomains="false">10.11.201.44</domain>
+        <domain includeSubdomains="false">203.76.150.251</domain>
+        <domain includeSubdomains="false">103.17.69.51</domain>
+        <domain includeSubdomains="false">10.11.201.52</domain>
+        <domain includeSubdomains="false">10.11.201.180</domain>
+
+        <domain includeSubdomains="true">smartapp.bankasia-bd.com</domain>
+        <!--<domain includeSubdomains="true">mybank.bankasia-bd.com</domain>-->
+        <domain includeSubdomains="true">ms-capi.publicdemo.xyz</domain>
+
+        <trust-anchors>
+            <!--<certificates src="@raw/mybank_bankasia_bd_com" />-->
+            <certificates src="@raw/smartapp_bankasia_bd_com" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

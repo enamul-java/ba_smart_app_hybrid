@@ -1,0 +1,107 @@
+{
+  "project_info": {
+    "project_number": "241276946259",
+    "firebase_url": "https://smart-app-new.firebaseio.com",
+    "project_id": "smart-app-new",
+    "storage_bucket": "smart-app-new.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:241276946259:android:0cf7c92502f786785d43a6",
+        "android_client_info": {
+          "package_name": "era.safetynet.payment.apps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "241276946259-dq4sutuvlkshp56np9fsaufld1prh9pn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "era.safetynet.payment.apps",
+            "certificate_hash": "f015cc1f36d18a93631b72b51a081c52fba82aa3"
+          }
+        },
+        {
+          "client_id": "241276946259-1p2en456g07v8hmvha15mqmae559893r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaW4qMXpYtniN3clGyn2DM_f2oo8kc7_w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "241276946259-1p2en456g07v8hmvha15mqmae559893r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "241276946259-121jea4ci3msqgij4p2rvvdb9shfuiqu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "era.bankasia.bdinternetbanking.apps"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:241276946259:android:66880a60b811472b",
+        "android_client_info": {
+          "package_name": "eraapps.bankasia.bdinternetbanking.apps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "241276946259-9l1p7k9reh2i1oc7bofcs6ad989kf3dt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "eraapps.bankasia.bdinternetbanking.apps",
+            "certificate_hash": "2f176727fcd52a56e1a68f3ae46b99a09ab4049b"
+          }
+        },
+        {
+          "client_id": "241276946259-9q9nic94n435g06lhk90i3tscrrnk7u6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "eraapps.bankasia.bdinternetbanking.apps",
+            "certificate_hash": "b18919829de93a6dfb6d69c3beffa3ce56151eb0"
+          }
+        },
+        {
+          "client_id": "241276946259-1p2en456g07v8hmvha15mqmae559893r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaW4qMXpYtniN3clGyn2DM_f2oo8kc7_w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "241276946259-1p2en456g07v8hmvha15mqmae559893r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "241276946259-121jea4ci3msqgij4p2rvvdb9shfuiqu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "era.bankasia.bdinternetbanking.apps"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

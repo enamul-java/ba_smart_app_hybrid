@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Use system defaults for devs not using AppCompat -->
+    <color name="colorPrimaryDark">@android:color/black</color>
+    <color name="colorAccent">#ff80cbc4</color>
+
+    <color name="ac_open_ColorPrimary">#FFFFFFFF</color>
+    <color name="ac_open_Deep_purple_300">#9575CD</color>
+    <color name="ac_open_blue_900">#0D47A1</color>
+    <color name="ac_open_buttonColor">#2E3192</color>
+    <color name="ac_open_grey_60">#666666</color>
+    <color name="ac_open_r_layout_background">#ffffff</color>
+    <color name="ac_open_tt_title_textcolor">#1f62af</color>
+    <color name="ac_open_gray">#7E7878</color>
+    <color name="ac_open_black_pure">#000000</color>
+    <color name="ac_open_app_color_new">#2D74BE</color>
+    <color name="ac_open_blue_50">#E3F2FD</color>
+    <color name="ac_open_tt_value_color">#666666</color>
+    <color name="ac_open_colorPrimary">#cc3333</color>
+    <color name="ac_open_blue_light">#F4FCFF</color>
+    <color name="ac_open_grey_20">#cccccc</color>
+
+    <color name="card_grey">#cccccc</color>
+    <color name="gray_card_layout_back">#CCCCCC</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="colorPrimary">#0053A1</color>
+    <color name="app_color">#0053A1</color>
+    <color name="text_label_color">#66000000</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="green">#288435</color>
+    <color name="red">#F13530</color>
+    <color name="stoke_color_account_detail">#E6E6E6</color>
+    <color name="float_transparent">#00000000</color>
+    <color name="grid_layout_bg_color">#E6E6E6</color>
+    <color name="login_btn_bg_color">#0053A1</color>
+    <color name="signup_btn_bg_color">#2D8EFC</color>
+    <color name="gradient_start_color">#0053A1</color>
+    <color name="gradient_end_color">#1677D3</color>
+    <color name="confirm_bg_color">#F6F6F6</color>
+    <color name="confirm_divider_bg_color">#CCCCCC</color>
+    <color name="confirm_lebel_text_color">#777777</color>
+    <color name="merchant_lebel_text_color">#FFFFFF</color>
+    <color name="confirm_value_text_color">#000000</color>
+    <color name="merchant_value_text_color">#FFFFFF</color>
+
+    <!--Sweet Alert Colors-->
+    <color name="sweet_dialog_bg_color">#FFFFFF</color>
+    <color name="button_text_color">#FFFFFF</color>
+    <color name="gray_btn_bg_color">#D0D0D0</color>
+    <color name="account_bg_line_color">#77839E</color>
+    <color name="gray_btn_bg_pressed_color">#B6B6B6</color>
+    <color name="blue_btn_bg_color">#AEDEF4</color>
+    <color name="blue_btn_bg_pressed_color">#96BFD2</color>
+    <color name="red_btn_bg_color">#DD6B55</color>
+    <color name="red_btn_bg_pressed_color">#CD5B55</color>
+    <color name="error_stroke_color">#F27474</color>
+    <color name="success_stroke_color">#A5DC86</color>
+    <color name="trans_success_stroke_color">#33A5DC86</color>
+    <color name="warning_stroke_color">#F8BB86</color>
+    <color name="text_color">#575757</color>
+    <color name="material_blue_grey_80">#ff37474f</color>
+    <color name="material_blue_grey_90">#ff263238</color>
+    <color name="material_blue_grey_95">#ff21272b</color>
+    <color name="material_deep_teal_20">#ff80cbc4</color>
+    <color name="material_deep_teal_50">#ff009688</color>
+
+    <color name="green_btn_bg_pressed_color">#00FF7F</color>
+    <color name="green_btn_bg_color">#00FF00</color>
+    <color name="success_text_color">#28a745</color>
+
+    <color name="select_text_color">#0053A1</color>
+    <color name="unselect_text_color">#ff21272b</color>
+    <color name="textView_login_edittext_color">#5F7586</color>
+    <color name="login_card_shadow_end_color">#041ADB99</color>
+    <color name="login_card_shadow_start_color">#cce8ff</color>
+
+    <color name="hints_login_edittext_color">#8097A8</color>
+    <color name="branch_location_background_color">#F6F6F6</color>
+    <color name="edittext_lable_color">#5F7586</color>
+    <color name="edittext_hint_text_color">#000000</color>
+    <color name="background_view_benificiary">#5778F2</color>
+
+
+    <color name="gray">#A3000000</color>
+    <color name="r_layout_background">#ffffff</color>
+    <color name="backgroud_new">#f3f9fb</color>
+    <color name="title_new">#226597</color>
+    <color name="lable_new">#87c0cd</color>
+</resources>

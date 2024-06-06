@@ -1,0 +1,525 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ac_open_background_image"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/layout_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll1st"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="@dimen/ac_open_r_title_margin_bottom_small"
+            android:orientation="vertical">
+
+            <include layout="@layout/ac_open_actionbar_header" />
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark"
+                android:visibility="gone"
+                app:elevation="0dp">
+
+                <include layout="@layout/ac_open_toolbar" />
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <include layout="@layout/ac_open_content_header" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="@dimen/ac_open_r_title_margin_left_small"
+                android:layout_marginRight="@dimen/ac_open_r_title_margin_left_small"
+                android:background="@color/ac_open_r_layout_background"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_registration_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/ac_open_s_main_title_margin_small"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="OCR (Scan your NID)"
+                    android:textAllCaps="true"
+                    android:textColor="@color/ac_open_tt_title_textcolor"
+                    android:textSize="@dimen/ac_open_txt_title_size_small"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ll5th"
+            android:layout_below="@id/ll1st"
+            android:layout_marginLeft="@dimen/ac_open_r_title_margin_left_small"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/ac_open_r_title_margin_left_small">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llFIrst"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/ivNID1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="300dp"
+                                        android:layout_margin="20dp"
+                                        android:src="@drawable/ac_open_nid_tips" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="bottom"
+                                    android:layout_margin="18dp"
+                                    android:gravity="bottom"
+
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/txtHintsNID"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:gravity="center_horizontal"
+                                        android:text="@string/ac_open_please_scan_nid_front_part_and_back_part"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/ac_open_lable_text_size_base" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:gravity="center_horizontal"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/ac_open_gray"
+                                        android:textSize="20sp"
+                                        android:visibility="gone" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:orientation="horizontal">
+
+                                        <Button
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:background="@drawable/ac_open_round_corner_black"
+                                            android:gravity="center"
+                                            android:text="Note"
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/ac_open_btn_text_size_base"
+                                            android:visibility="gone" />
+
+                                        <TextView
+                                            android:id="@+id/txtReg"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="left"
+                                            android:layout_marginLeft="10dp"
+                                            android:gravity="left"
+                                            android:text="Blurry or covered images may hinder your account opening. "
+                                            android:textColor="@color/ac_open_gray"
+
+                                            android:textSize="@dimen/ac_open_text_size_hint_base"
+                                            android:visibility="gone" />
+                                    </LinearLayout>
+
+                                    <Button
+                                        android:id="@+id/btnOCR"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/ac_open_round_button_blue"
+                                        android:padding="@dimen/ac_open_btn_padding_base"
+                                        android:text="@string/ac_open_let_s_go"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/ac_open_btn_text_size_base" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:id="@+id/llCapture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+
+                        android:id="@+id/ll3rd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_10">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:elevation="15dp"
+                            android:visibility="visible"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="15dp"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:id="@+id/txtFront"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:text="@string/ac_open_select_your_front_part_of_nid_smart_card_photo"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/ac_open_app_color_new"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold">
+
+                                </TextView>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:id="@+id/nomineePhoto"
+                                        android:layout_width="450dp"
+                                        android:layout_height="180dp"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:src="@drawable/ac_open_n_front2" />
+
+                                    <TextView
+                                        android:id="@+id/img_plus"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_alignBottom="@id/nomineePhoto"
+                                        android:layout_alignParentRight="true"
+                                        android:background="@drawable/ac_open_add_icon" />
+                                </RelativeLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"
+                                        android:layout_margin="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/ac_open_button_gradient_background"
+                                        android:text="Select Image"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold"
+                                        android:visibility="gone" />
+
+                                    <Button
+                                        android:id="@+id/btnLogin"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"
+                                        android:layout_margin="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/ac_open_button_gradient_background"
+                                        android:text="Update Image"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold"
+                                        android:visibility="gone" />
+
+                                    <Button
+                                        android:id="@+id/btnInsert"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"
+                                        android:layout_margin="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/ac_open_button_gradient_background"
+                                        android:text="Upload Image"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll3rd1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/ac_open_r_title_margin_bottom_small"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_10">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:elevation="15dp"
+                            android:visibility="visible"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="15dp"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:id="@+id/txtBack"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:text="@string/ac_open_select_your_back_part_of_nid_smart_card_photo"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/ac_open_app_color_new"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold">
+
+                                </TextView>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:id="@+id/ivGuardianPhoto"
+                                        android:layout_width="450dp"
+                                        android:layout_height="180dp"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:src="@drawable/ac_open_nid_back2" />
+
+                                    <TextView
+                                        android:id="@+id/img_plus1"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_alignBottom="@id/ivGuardianPhoto"
+                                        android:layout_alignParentRight="true"
+                                        android:background="@drawable/ac_open_add_icon" />
+                                </RelativeLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"
+                                        android:layout_margin="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/ac_open_button_gradient_background"
+                                        android:text="Select Image"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold"
+                                        android:visibility="gone" />
+
+                                    <Button
+                                        android:id="@+id/btnSubmit1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"
+                                        android:layout_margin="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/ac_open_button_gradient_background"
+                                        android:text="Update Image"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold"
+                                        android:visibility="gone" />
+
+                                    <Button
+                                        android:id="@+id/btnInsert1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"
+                                        android:layout_margin="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/ac_open_button_gradient_background"
+                                        android:text="Upload Image"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="60dp"
+                        android:gravity="center"
+                        android:visibility="gone">
+
+                        <RadioGroup
+                            android:id="@+id/txtNID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <RadioButton
+                                android:id="@+id/rbSmartCard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="SMART Card" />
+
+                            <RadioButton
+                                android:id="@+id/rbNID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="NID" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/ll5th"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ac_open_r_title_margin_left_small"
+                        android:layout_marginRight="@dimen/ac_open_r_title_margin_left_small"
+                        android:layout_marginBottom="@dimen/ac_open_r_margin_bottom_small"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:id="@+id/chkterms_condition"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:padding="@dimen/ac_open_r_text_padding_small"
+                            android:textAlignment="viewStart"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ac_open_tt_value_color"
+                            android:textSize="@dimen/ac_open_text_size_value_small"
+                            tools:ignore="RtlCompat" />
+
+                        <Button
+                            android:id="@+id/btnOCRSubmit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/ac_open_r_margin_submit_buton_small"
+                            android:layout_weight="2"
+                            android:background="@drawable/ac_open_blue_border_rounded_cornwe5"
+                            android:text="Next"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/ac_open_text_size_value_small" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/linear_layout_bottom_round"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tv_account_title_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/input_padding_letf_base"
+                android:paddingTop="@dimen/margin_15"
+                android:paddingBottom="@dimen/margin_10"
+                android:text="@string/account_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_base" />
+
+            <TextView
+                android:id="@+id/tv_account_title_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingTop="@dimen/margin_15"
+                android:paddingRight="@dimen/padding_5"
+                android:paddingBottom="@dimen/margin_10"
+                android:text="@string/nick_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_base" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layou_nick_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tv_nick_name_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/input_padding_letf_base"
+                android:paddingTop="@dimen/margin_15"
+                android:paddingBottom="@dimen/margin_10"
+                android:text="@string/nick_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_base" />
+
+            <TextView
+                android:id="@+id/tv_nick_name_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingTop="@dimen/margin_15"
+                android:paddingRight="@dimen/padding_5"
+                android:paddingBottom="@dimen/margin_10"
+                android:text="@string/nick_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_base" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layou_branch_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tv_branch_name_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/input_padding_letf_base"
+                android:paddingTop="@dimen/margin_15"
+                android:paddingBottom="@dimen/margin_10"
+                android:text="@string/branch_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_base" />
+
+            <TextView
+                android:id="@+id/tv_branch_name_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingTop="@dimen/margin_15"
+                android:paddingRight="@dimen/padding_5"
+                android:paddingBottom="@dimen/margin_10"
+                android:text="@string/nick_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_base" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

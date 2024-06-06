@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lyt_occupation_dropdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_marginStart="@dimen/text_input_layout_left_size"
+            android:layout_marginTop="@dimen/text_input_layout_top_size"
+            android:layout_marginEnd="@dimen/text_input_layout_right_size"
+            android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+            android:hint="@string/occupation"
+            android:padding="@dimen/padding_5"
+            app:boxStrokeColor="@color/app_color"
+            app:boxStrokeErrorColor="@color/app_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_occupation_dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_field_height_size"
+                android:clickable="true"
+                android:inputType="none"
+                android:longClickable="false"
+                android:paddingStart="@dimen/padding_15"
+                android:paddingTop="@dimen/padding_5"
+                android:paddingEnd="@dimen/padding_10"
+                android:paddingBottom="@dimen/padding_5"
+                android:singleLine="true"
+                android:textSize="@dimen/textsize_18"
+                android:textColor="@color/black"
+                android:focusable="false"
+                android:editable="false"
+                android:drawableRight="@drawable/icon_dropdown"
+                android:drawableTint="@color/gray"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lyt_occupation_dropdown_old"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_input_layout_left_size"
+            android:layout_marginTop="@dimen/text_input_layout_top_size"
+            android:layout_marginEnd="@dimen/text_input_layout_right_size"
+            android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+            android:hint="@string/occupation"
+            android:padding="@dimen/padding_5"
+            app:boxStrokeColor="@color/app_color"
+            app:boxStrokeErrorColor="@color/app_color"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/edt_occupation_dropdown_old"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_field_height_size"
+                android:clickable="false"
+                android:inputType="none"
+                android:longClickable="false"
+                android:paddingStart="@dimen/padding_15"
+                android:paddingTop="@dimen/padding_5"
+                android:paddingEnd="@dimen/padding_10"
+                android:paddingBottom="@dimen/padding_5"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_18" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        
+
+    </RelativeLayout>
+
+
+</LinearLayout>

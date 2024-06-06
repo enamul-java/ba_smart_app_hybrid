@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/icon_footer_home_active"
+        android:title="@string/home" />
+
+
+    <item
+
+        android:id="@+id/navigation_statement"
+        android:icon="@drawable/icon_footer_statement"
+        android:title="@string/statement" />
+
+
+    <item
+        android:id="@+id/placeholder"
+        android:title="@string/qr_pay" />
+
+    <item
+        android:id="@+id/navigation_beneficiary"
+        android:icon="@drawable/icon_footer_beneficiary"
+        android:title="@string/beneficiary_bottom" />
+
+    <item
+        android:id="@+id/navigation_menu"
+        android:icon="@drawable/icon_footer_menu_active"
+        android:title="@string/menu" />
+</menu>

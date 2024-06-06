@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".presentation.welcome.card.screen.CardInformationActivity">
+
+    <LinearLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/header_layout_toolbar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_layout"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lyt_card_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/lyt_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/text_input_layout_left_size"
+                                android:layout_marginTop="@dimen/text_input_layout_top_size"
+                                android:layout_marginEnd="@dimen/text_input_layout_right_size"
+                                android:layout_marginBottom="@dimen/text_input_layout_bottom_size">
+
+                                <ImageView
+                                    android:id="@+id/iv_search_card"
+                                    android:layout_width="@dimen/input_field_height_size"
+                                    android:layout_height="@dimen/input_field_height_size"
+                                    android:layout_gravity="end"
+                                    android:layout_marginTop="@dimen/margin_5"
+                                    android:layout_marginEnd="@dimen/margin_5"
+                                    android:background="@drawable/beneficiary_round_border_transparent"
+                                    android:padding="@dimen/beneficiary_image_padding_base"
+                                    android:src="@drawable/icon_search"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/lyt_card_no"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:hint="@string/card_no"
+                                    android:padding="@dimen/padding_5"
+                                    tools:layout_editor_absoluteX="4dp"
+                                    tools:layout_editor_absoluteY="0dp">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edt_card_no"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/input_field_height_size"
+                                        android:layout_marginEnd="@dimen/beneficiary_icon_margin_right_base"
+                                        android:clickable="false"
+                                        android:focusable="false"
+                                        android:focusableInTouchMode="false"
+                                        android:inputType="none"
+                                        android:padding="@dimen/padding_5"
+                                        android:singleLine="true"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/textsize_base" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/lyt_expiry_date"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/text_input_layout_left_size"
+                                android:layout_marginTop="@dimen/text_input_layout_top_size"
+                                android:layout_marginEnd="@dimen/text_input_layout_right_size"
+                                android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+                                android:hint="@string/expiry_date"
+                                android:padding="@dimen/padding_5">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edt_expiry_date"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/input_field_height_size"
+                                    android:clickable="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:inputType="date"
+                                    android:padding="@dimen/padding_5"
+                                    android:singleLine="true"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize_base" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </LinearLayout>
+
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_proceed"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_below="@+id/lyt_input"
+                            android:layout_marginStart="@dimen/button_margin_left"
+                            android:layout_marginTop="@dimen/margin_20"
+                            android:layout_marginEnd="@dimen/button_margin_right"
+                            android:layout_marginBottom="@dimen/margin_10"
+                            android:background="@drawable/bt_background_rounded_app_color"
+                            android:padding="@dimen/padding_5"
+                            android:text="@string/proceed"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_card_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        xmlns:card_view="http://schemas.android.com/tools"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/input_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/merchant_background_shadow"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_title_one"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="@dimen/padding_10"
+                                android:text="Title One"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_18"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/divider_height_base"
+                                android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                                android:layout_marginRight="@dimen/confirm_label_padding_base"
+                                android:background="@color/black" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:outlineAmbientShadowColor="@color/app_color"
+                                android:outlineSpotShadowColor="@color/app_color"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="@dimen/margin_5"
+                                app:cardUseCompatPadding="true"
+                                app:elevation="0dp"
+                                card_view:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/merchant_info_bg_round_confirm"
+                                        android:orientation="vertical">
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
+                                            android:padding="@dimen/padding_10">
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="@dimen/confirm_label_margin_base"
+                                                android:layout_weight="2"
+                                                android:orientation="horizontal"
+                                                android:padding="@dimen/confirm_label_padding_base">
+
+                                                <TextView
+                                                    android:id="@+id/tv_account_no_label"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:text="@string/account_no"
+                                                    android:textColor="@color/merchant_lebel_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                                <TextView
+                                                    android:id="@+id/account_no_value"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:gravity="end"
+                                                    android:textColor="@color/merchant_value_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                            </LinearLayout>
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="@dimen/divider_height_base"
+                                                android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                                                android:layout_marginRight="@dimen/confirm_label_padding_base"
+                                                android:background="@color/confirm_divider_bg_color" />
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="@dimen/confirm_label_margin_base"
+                                                android:layout_weight="2"
+                                                android:orientation="horizontal"
+                                                android:padding="@dimen/confirm_label_padding_base">
+
+                                                <TextView
+                                                    android:id="@+id/tv_balance_label"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:text="@string/balance"
+                                                    android:textColor="@color/merchant_lebel_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                                <TextView
+                                                    android:id="@+id/tv_balance_value"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:gravity="end"
+                                                    android:textColor="@color/merchant_value_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                            </LinearLayout>
+
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="@dimen/divider_height_base"
+                                                android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                                                android:layout_marginRight="@dimen/confirm_label_padding_base"
+                                                android:background="@color/confirm_divider_bg_color" />
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="@dimen/confirm_label_margin_base"
+                                                android:layout_weight="2"
+                                                android:orientation="horizontal"
+                                                android:padding="@dimen/confirm_label_padding_base">
+
+                                                <TextView
+                                                    android:id="@+id/tv_hold_amount_label"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:text="@string/hold_amount"
+                                                    android:textColor="@color/merchant_lebel_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                                <TextView
+                                                    android:id="@+id/tv_hold_amount_value"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:gravity="end"
+                                                    android:textColor="@color/merchant_value_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                            </LinearLayout>
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="@dimen/divider_height_base"
+                                                android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                                                android:layout_marginRight="@dimen/confirm_label_padding_base"
+                                                android:background="@color/confirm_divider_bg_color" />
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="@dimen/confirm_label_margin_base"
+                                                android:layout_weight="2"
+                                                android:orientation="horizontal"
+                                                android:padding="@dimen/confirm_label_padding_base">
+
+                                                <TextView
+                                                    android:id="@+id/tv_currency_id_label"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:text="@string/currency_id"
+                                                    android:textColor="@color/merchant_lebel_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                                <TextView
+                                                    android:id="@+id/tv_currency_id_value"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:gravity="end"
+                                                    android:textColor="@color/merchant_value_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                            </LinearLayout>
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="@dimen/divider_height_base"
+                                                android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                                                android:layout_marginRight="@dimen/confirm_label_padding_base"
+                                                android:background="@color/confirm_divider_bg_color" />
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="@dimen/confirm_label_margin_base"
+                                                android:layout_weight="2"
+                                                android:orientation="horizontal"
+                                                android:padding="@dimen/confirm_label_padding_base">
+
+                                                <TextView
+                                                    android:id="@+id/tv_last_txn_time_label"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:text="@string/last_transaction_time"
+                                                    android:textColor="@color/merchant_lebel_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                                <TextView
+                                                    android:id="@+id/tv_last_txn_time_value"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:gravity="end"
+                                                    android:textColor="@color/merchant_value_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                            </LinearLayout>
+
+
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_title_two"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_10"
+                                    android:text="Title Two"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize_18"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_msg_two"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_10"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize_base"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/divider_height_base"
+                                android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                                android:layout_marginRight="@dimen/confirm_label_padding_base"
+                                android:background="@color/black" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:outlineAmbientShadowColor="@color/app_color"
+                                android:outlineSpotShadowColor="@color/app_color"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="@dimen/margin_5"
+                                app:cardUseCompatPadding="true"
+                                app:elevation="0dp"
+                                card_view:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/merchant_info_bg_round_confirm"
+                                        android:orientation="vertical">
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
+                                            android:padding="@dimen/padding_10">
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="@dimen/confirm_label_margin_base"
+                                                android:layout_weight="2"
+                                                android:orientation="horizontal"
+                                                android:padding="@dimen/confirm_label_padding_base">
+
+                                                <TextView
+                                                    android:id="@+id/tv_min_payment_bdt_label"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:text="@string/min_payment_bdt"
+                                                    android:textColor="@color/merchant_lebel_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                                <TextView
+                                                    android:id="@+id/tv_min_payment_bdt_value"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:gravity="end"
+                                                    android:textColor="@color/merchant_value_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                            </LinearLayout>
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="@dimen/divider_height_base"
+                                                android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                                                android:layout_marginRight="@dimen/confirm_label_padding_base"
+                                                android:background="@color/confirm_divider_bg_color" />
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="@dimen/confirm_label_margin_base"
+                                                android:layout_weight="2"
+                                                android:orientation="horizontal"
+                                                android:padding="@dimen/confirm_label_padding_base">
+
+                                                <TextView
+                                                    android:id="@+id/tv_min_payment_usd_label"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:text="@string/min_payment_usd"
+                                                    android:textColor="@color/merchant_lebel_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                                <TextView
+                                                    android:id="@+id/tv_min_payment_usd_value"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:gravity="end"
+                                                    android:textColor="@color/merchant_value_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                            </LinearLayout>
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="@dimen/divider_height_base"
+                                                android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                                                android:layout_marginRight="@dimen/confirm_label_padding_base"
+                                                android:background="@color/confirm_divider_bg_color" />
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="@dimen/confirm_label_margin_base"
+                                                android:layout_weight="2"
+                                                android:orientation="horizontal"
+                                                android:padding="@dimen/confirm_label_padding_base">
+
+                                                <TextView
+                                                    android:id="@+id/tv_payment_due_date_label"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:text="@string/payment_due_date"
+                                                    android:textColor="@color/merchant_lebel_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                                <TextView
+                                                    android:id="@+id/tv_payment_due_date_value"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:gravity="end"
+                                                    android:textColor="@color/merchant_value_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                            </LinearLayout>
+
+
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_title_three"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_10"
+                                    android:text="Title Three"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize_18"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_msg_three"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_10"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize_base"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/divider_height_base"
+                                android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                                android:layout_marginRight="@dimen/confirm_label_padding_base"
+                                android:background="@color/black" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:outlineAmbientShadowColor="@color/app_color"
+                                android:outlineSpotShadowColor="@color/app_color"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="@dimen/margin_5"
+                                app:cardUseCompatPadding="true"
+                                app:elevation="0dp"
+                                card_view:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:id="@+id/ac_no_balance_layout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/merchant_info_bg_round_confirm"
+                                        android:orientation="vertical">
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
+                                            android:padding="@dimen/padding_10">
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="@dimen/confirm_label_margin_base"
+                                                android:layout_weight="2"
+                                                android:orientation="horizontal"
+                                                android:padding="@dimen/confirm_label_padding_base">
+
+                                                <TextView
+                                                    android:id="@+id/tv_card_no_label"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:text="@string/card_no"
+                                                    android:textColor="@color/merchant_lebel_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                                <TextView
+                                                    android:id="@+id/tv_card_no_value"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:gravity="end"
+                                                    android:textColor="@color/merchant_value_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                            </LinearLayout>
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="@dimen/divider_height_base"
+                                                android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                                                android:layout_marginRight="@dimen/confirm_label_padding_base"
+                                                android:background="@color/confirm_divider_bg_color" />
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="@dimen/confirm_label_margin_base"
+                                                android:layout_weight="2"
+                                                android:orientation="horizontal"
+                                                android:padding="@dimen/confirm_label_padding_base">
+
+                                                <TextView
+                                                    android:id="@+id/tv_card_status_label"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:text="@string/card_status"
+                                                    android:textColor="@color/merchant_lebel_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                                <TextView
+                                                    android:id="@+id/tv_card_status_value"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:gravity="end"
+                                                    android:textColor="@color/merchant_value_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                            </LinearLayout>
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="@dimen/divider_height_base"
+                                                android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                                                android:layout_marginRight="@dimen/confirm_label_padding_base"
+                                                android:background="@color/confirm_divider_bg_color" />
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="@dimen/confirm_label_margin_base"
+                                                android:layout_weight="2"
+                                                android:orientation="horizontal"
+                                                android:padding="@dimen/confirm_label_padding_base">
+
+                                                <TextView
+                                                    android:id="@+id/tv_card_state_label"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:text="@string/card_state"
+                                                    android:textColor="@color/merchant_lebel_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                                <TextView
+                                                    android:id="@+id/tv_card_state_value"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:gravity="end"
+                                                    android:textColor="@color/merchant_value_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                            </LinearLayout>
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="@dimen/divider_height_base"
+                                                android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                                                android:layout_marginRight="@dimen/confirm_label_padding_base"
+                                                android:background="@color/confirm_divider_bg_color" />
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="@dimen/confirm_label_margin_base"
+                                                android:layout_weight="2"
+                                                android:orientation="horizontal"
+                                                android:padding="@dimen/confirm_label_padding_base">
+
+                                                <TextView
+                                                    android:id="@+id/tv_outstanding_bdt_label"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:text="@string/outstanding_bdt"
+                                                    android:textColor="@color/merchant_lebel_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                                <TextView
+                                                    android:id="@+id/tv_outstanding_bdt_value"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:gravity="end"
+                                                    android:textColor="@color/merchant_value_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                            </LinearLayout>
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="@dimen/divider_height_base"
+                                                android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                                                android:layout_marginRight="@dimen/confirm_label_padding_base"
+                                                android:background="@color/confirm_divider_bg_color" />
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="@dimen/confirm_label_margin_base"
+                                                android:layout_weight="2"
+                                                android:orientation="horizontal"
+                                                android:padding="@dimen/confirm_label_padding_base">
+
+                                                <TextView
+                                                    android:id="@+id/tv_outstanding_usd_label"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:text="@string/outstanding_usd"
+                                                    android:textColor="@color/merchant_lebel_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                                <TextView
+                                                    android:id="@+id/tv_outstanding_usd_value"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:gravity="end"
+                                                    android:textColor="@color/merchant_value_text_color"
+                                                    android:textSize="@dimen/textsize_base" />
+
+                                            </LinearLayout>
+
+
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+</RelativeLayout>

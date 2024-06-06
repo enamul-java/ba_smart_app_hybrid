@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/merchant_background_shadow"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:outlineAmbientShadowColor="@color/app_color"
+            android:outlineSpotShadowColor="@color/app_color"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="@dimen/margin_5"
+            app:cardUseCompatPadding="true"
+            app:elevation="0dp"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/merchant_info_bg_round_confirm"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_10">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/confirm_label_margin_base"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/confirm_label_padding_base">
+
+                            <TextView
+                                android:id="@+id/tv_card_info_card_title_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/card_title"
+                                android:textColor="@color/merchant_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_card_info_card_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/merchant_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/confirm_label_margin_base"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/confirm_label_padding_base">
+
+                            <TextView
+                                android:id="@+id/tv_card_info_expire_date_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/expire_date"
+                                android:textColor="@color/merchant_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_card_info_expire_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/merchant_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height_base"
+                            android:layout_marginLeft="@dimen/confirm_label_padding_base"
+                            android:layout_marginRight="@dimen/confirm_label_padding_base"
+                            android:background="@color/confirm_divider_bg_color" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/confirm_label_margin_base"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/confirm_label_padding_base">
+
+                            <TextView
+                                android:id="@+id/tv_card_info_contact_address_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/contact_address"
+                                android:textColor="@color/merchant_lebel_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                            <TextView
+                                android:id="@+id/tv_card_info_contact_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/merchant_value_text_color"
+                                android:textSize="@dimen/textsize_base" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_id_input"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/text_input_layout_left_size"
+            android:layout_marginTop="@dimen/text_input_layout_top_size"
+            android:layout_marginEnd="@dimen/text_input_layout_right_size"
+            android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+            android:hint="@string/email_id"
+            android:padding="@dimen/padding_5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_email_id_value"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_field_height_size"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/padding_5"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_base" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/city_input"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/text_input_layout_left_size"
+            android:layout_marginTop="@dimen/text_input_layout_top_size"
+            android:layout_marginEnd="@dimen/text_input_layout_right_size"
+            android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+            android:hint="@string/city"
+            android:padding="@dimen/padding_5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_city_value"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_field_height_size"
+                android:inputType="textCapWords"
+                android:padding="@dimen/padding_5"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_base" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/zip_code_input"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/text_input_layout_left_size"
+            android:layout_marginTop="@dimen/text_input_layout_top_size"
+            android:layout_marginEnd="@dimen/text_input_layout_right_size"
+            android:layout_marginBottom="@dimen/text_input_layout_bottom_size"
+            android:hint="@string/zip_code"
+            android:padding="@dimen/padding_5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_zip_code_value"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_field_height_size"
+                android:inputType="number"
+                android:padding="@dimen/padding_5"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_base" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

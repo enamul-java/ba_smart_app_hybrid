@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".presentation.home.remote.ac_open.view.AcOpenWelcomeActivity">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:id="@+id/lyt_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/login_icon_size"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_login" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_25"
+                android:gravity="center"
+                android:text="@string/welcome_to"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_ac_welcome"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/online_ac_opening"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/textsize_18"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                android:gravity="center"
+                android:text="@string/online_ac_opening_msg"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_18"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyt_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lyt_first">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_30"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_from_overseas"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/margin_80"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:layout_marginEnd="@dimen/margin_80"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:padding="@dimen/padding_5"
+                    android:background="@drawable/btn_round_border_transparent_grey"
+                    android:text="@string/from_overseas"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_18"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_from_bangladesh"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ac_open_button_height"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/margin_80"
+                    android:layout_marginEnd="@dimen/margin_80"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:background="@drawable/bt_background_rounded_app_color"
+                    android:text="@string/from_bangladesh"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_18"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

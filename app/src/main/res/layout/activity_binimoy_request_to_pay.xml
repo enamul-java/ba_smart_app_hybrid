@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.welcome.binimoy.screen.BinimoyResistrationRequest">
+
+    <LinearLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include layout="@layout/header_layout_toolbar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lo_req_pay_input"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <include layout="@layout/binimoy_req_to_pay_input_layout" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lo_req_pay_success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical|bottom"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include layout="@layout/binimoy_req_pay_success_layout" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
